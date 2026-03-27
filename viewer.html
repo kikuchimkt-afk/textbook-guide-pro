@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbook Guide | Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+<body class="viewer-body">
+    <header class="viewer-header">
+        <a href="math_g2_toc.html" class="back-link" style="color:#fff;">
+            <svg style="width:24px;height:24px;margin-right:5px;vertical-align:middle" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+            目次に戻る
+        </a>
+        <h1 id="chapter-title">第1章 式の計算</h1>
+        <button id="btn-mode" class="btn-mode" title="モード切替">
+            <span id="mode-icon">📖</span>
+            <span id="mode-label">講義モード</span>
+        </button>
+        <div class="page-controls">
+            <button id="btn-prev" class="btn-icon">◀</button>
+            <span id="page-indicator">p.--</span>
+            <button id="btn-next" class="btn-icon">▶</button>
+        </div>
+    </header>
+    
+    <main class="viewer-container">
+        <!-- Left Pane: Textbook Image -->
+        <section class="pane left-pane" id="image-pane">
+            <div class="zoom-controls">
+                <button id="btn-zoom-out">-</button>
+                <button id="btn-zoom-in">+</button>
+            </div>
+            <div class="image-wrapper" id="image-wrapper">
+                <img id="textbook-img" src="" alt="Textbook Page" draggable="false">
+                <img id="textbook-img-right" src="" alt="Textbook Page Right" draggable="false" style="display:none">
+            </div>
+        </section>
+        
+        <!-- Right Pane: Explanation -->
+        <section class="pane right-pane">
+            <div class="explanation-content" id="explanation-container">
+                <!-- Data injected via JS -->
+                <div class="empty-state">解説を読み込み中...</div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="js/data_math_g2.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
