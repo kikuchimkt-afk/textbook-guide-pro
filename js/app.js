@@ -31,8 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function applyZoom() {
-        imgEl.style.transform = `scale(${currentZoom})`;
-        if (isLectureMode) imgRightEl.style.transform = `scale(${currentZoom})`;
+        if (isLectureMode) {
+            // 講義モード: ラッパーごとズーム（位置ずれ防止）
+            imageWrapper.style.transform = `scale(${currentZoom})`;
+            imgEl.style.transform = 'none';
+            imgRightEl.style.transform = 'none';
+        } else {
+            imageWrapper.style.transform = 'none';
+            imgEl.style.transform = `scale(${currentZoom})`;
+        }
     }
 
     function getImageSrc(pageNum) {
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentZoom = 1;
         imgEl.style.transform = 'scale(1)';
         imgRightEl.style.transform = 'scale(1)';
+        imageWrapper.style.transform = 'none';
 
         // Page turn animation
         if (direction !== undefined) animatePageTurn(direction);

@@ -182,12 +182,14 @@
     justify-content: center;
     align-items: flex-start;
     gap: 4px;
+    transform-origin: top center;
 }
 .lecture-mode #textbook-img,
 .lecture-mode #textbook-img-right {
     max-width: 49%;
     height: auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: none !important;
 }
 .lecture-mode #textbook-img-right {
     display: block !important;
