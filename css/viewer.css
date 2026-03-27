@@ -255,6 +255,15 @@
 .fullscreen-mode .viewer-container {
     height: 100vh;
 }
+.fullscreen-mode .zoom-controls {
+    display: none;
+}
+.fullscreen-mode .float-page {
+    font-size: 1.1rem;
+    padding: 8px 24px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+}
 
 /* フローティングナビ */
 .floating-nav {
