@@ -65,8 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageNum > MAX_PAGE) pageNum = MAX_PAGE;
         currentPage = pageNum;
         
+        const currentChapter = urlParams.get('chapter') || '1';
         const newUrl = window.location.protocol + "//" + window.location.host + 
-            window.location.pathname + '?chapter=1&page=' + currentPage;
+            window.location.pathname + '?chapter=' + currentChapter + '&page=' + currentPage;
         window.history.pushState({ path: newUrl }, '', newUrl);
 
         currentZoom = 1;
