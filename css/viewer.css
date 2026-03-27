@@ -170,6 +170,50 @@
     font-size: 1.1rem;
 }
 
+/* 全画面ボタン */
+.btn-fullscreen {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+.btn-fullscreen:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(155,89,182,0.5);
+}
+.btn-fullscreen.active {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+#fs-icon {
+    font-size: 1.1rem;
+}
+
+/* 全画面解除ボタン（フローティング、右上） */
+.float-exit-fs {
+    top: 16px !important;
+    right: 16px !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    background: rgba(231,76,60,0.85) !important;
+    border-radius: 25px !important;
+}
+.float-exit-fs:hover {
+    background: rgba(231,76,60,1) !important;
+}
+
 /* 講義モード: 見開き表示 */
 .lecture-mode .right-pane {
     display: none;

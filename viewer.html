@@ -22,7 +22,10 @@
             <span id="mode-label">講義モード</span>
         </button>
         <div class="page-controls">
-            <button id="btn-fullscreen" class="btn-icon" title="全画面" style="display:none">⛶</button>
+            <button id="btn-fullscreen" class="btn-fullscreen" title="全画面表示" style="display:none">
+                <span id="fs-icon">📺</span>
+                <span id="fs-label">全画面</span>
+            </button>
             <button id="btn-prev" class="btn-icon">◀</button>
             <span id="page-indicator">p.--</span>
             <button id="btn-next" class="btn-icon">▶</button>
@@ -56,6 +59,7 @@
         <button class="float-btn float-prev" id="float-prev">❮</button>
         <button class="float-btn float-next" id="float-next">❯</button>
         <div class="float-page" id="float-page">p.--</div>
+        <button class="float-btn float-exit-fs" id="float-exit-fs" style="display:none">✕ 全画面解除</button>
     </div>
 
     <script>

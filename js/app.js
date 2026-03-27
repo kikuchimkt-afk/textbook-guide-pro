@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNext = document.getElementById('btn-next');
     const btnMode = document.getElementById('btn-mode');
     const btnFullscreen = document.getElementById('btn-fullscreen');
+    const fsIcon = document.getElementById('fs-icon');
+    const fsLabel = document.getElementById('fs-label');
     const modeIcon = document.getElementById('mode-icon');
     const modeLabel = document.getElementById('mode-label');
     const viewerContainer = document.querySelector('.viewer-container');
@@ -21,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatPrev = document.getElementById('float-prev');
     const floatNext = document.getElementById('float-next');
     const floatPage = document.getElementById('float-page');
+    const floatExitFs = document.getElementById('float-exit-fs');
     
     let isLectureMode = false;
     let currentZoom = 1;
@@ -129,11 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
         modeIcon.textContent = isLectureMode ? '📝' : '📖';
         modeLabel.textContent = isLectureMode ? '解説モード' : '講義モード';
         
-        // Show/hide fullscreen button and floating nav
         btnFullscreen.style.display = isLectureMode ? 'inline-flex' : 'none';
         floatingNav.style.display = isLectureMode ? 'block' : 'none';
         
-        // Exit fullscreen when switching to normal mode
         if (!isLectureMode && document.fullscreenElement) {
             document.exitFullscreen();
         }
@@ -141,28 +142,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Fullscreen toggle
-    btnFullscreen.addEventListener('click', () => {
+    function toggleFullscreen() {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().then(() => {
                 document.body.classList.add('fullscreen-mode');
-                btnFullscreen.textContent = '✕';
-                btnFullscreen.title = '全画面解除';
+                btnFullscreen.classList.add('active');
+                fsIcon.textContent = '↩️';
+                fsLabel.textContent = '戻る';
+                floatExitFs.style.display = 'block';
             });
         } else {
-            document.exitFullscreen().then(() => {
-                document.body.classList.remove('fullscreen-mode');
-                btnFullscreen.textContent = '⛶';
-                btnFullscreen.title = '全画面';
-            });
+            exitFullscreen();
         }
-    });
+    }
 
-    // Handle ESC exiting fullscreen
+    function exitFullscreen() {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        }
+    }
+
+    btnFullscreen.addEventListener('click', toggleFullscreen);
+    floatExitFs.addEventListener('click', exitFullscreen);
+
+    // Fullscreen change event (handles ESC and all exit methods)
     document.addEventListener('fullscreenchange', () => {
         if (!document.fullscreenElement) {
             document.body.classList.remove('fullscreen-mode');
-            btnFullscreen.textContent = '⛶';
-            btnFullscreen.title = '全画面';
+            btnFullscreen.classList.remove('active');
+            fsIcon.textContent = '📺';
+            fsLabel.textContent = '全画面';
+            floatExitFs.style.display = 'none';
         }
     });
 
@@ -170,10 +180,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') goPrev();
         else if (e.key === 'ArrowRight') goNext();
-        else if (e.key === 'f' || e.key === 'F') {
-            if (isLectureMode) btnFullscreen.click();
-        }
+        else if ((e.key === 'f' || e.key === 'F') && isLectureMode) toggleFullscreen();
     });
+
+    // Touch swipe support for tablets
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+        const diff = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(diff) > 80) {
+            if (diff > 0) goPrev();
+            else goNext();
+        }
+    }, { passive: true });
 
     loadPage(currentPage);
 });
