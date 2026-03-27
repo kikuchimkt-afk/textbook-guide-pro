@@ -22,6 +22,7 @@
             <span id="mode-label">講義モード</span>
         </button>
         <div class="page-controls">
+            <button id="btn-fullscreen" class="btn-icon" title="全画面" style="display:none">⛶</button>
             <button id="btn-prev" class="btn-icon">◀</button>
             <span id="page-indicator">p.--</span>
             <button id="btn-next" class="btn-icon">▶</button>
@@ -49,6 +50,13 @@
             </div>
         </section>
     </main>
+
+    <!-- 講義モード用フローティングナビ -->
+    <div class="floating-nav" id="floating-nav" style="display:none">
+        <button class="float-btn float-prev" id="float-prev">❮</button>
+        <button class="float-btn float-next" id="float-next">❯</button>
+        <div class="float-page" id="float-page">p.--</div>
+    </div>
 
     <script>
         window.MathJax = {

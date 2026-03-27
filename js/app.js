@@ -13,9 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
     const btnMode = document.getElementById('btn-mode');
+    const btnFullscreen = document.getElementById('btn-fullscreen');
     const modeIcon = document.getElementById('mode-icon');
     const modeLabel = document.getElementById('mode-label');
     const viewerContainer = document.querySelector('.viewer-container');
+    const floatingNav = document.getElementById('floating-nav');
+    const floatPrev = document.getElementById('float-prev');
+    const floatNext = document.getElementById('float-next');
+    const floatPage = document.getElementById('float-page');
     
     let isLectureMode = false;
     let currentZoom = 1;
@@ -32,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyZoom() {
         if (isLectureMode) {
-            // 講義モード: ラッパーごとズーム（位置ずれ防止）
             imageWrapper.style.transform = `scale(${currentZoom})`;
             imgEl.style.transform = 'none';
             imgRightEl.style.transform = 'none';
@@ -47,10 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return `images/math_g2_keirinkan/page_${pdfPageNum.toString().padStart(4, '0')}.png`;
     }
 
-    // Page turn animation
     function animatePageTurn(direction) {
         imageWrapper.classList.remove('page-turn-left', 'page-turn-right');
-        void imageWrapper.offsetWidth; // reflow
+        void imageWrapper.offsetWidth;
         imageWrapper.classList.add(direction > 0 ? 'page-turn-left' : 'page-turn-right');
     }
 
@@ -59,22 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageNum > MAX_PAGE) pageNum = MAX_PAGE;
         currentPage = pageNum;
         
-        // URL update
         const newUrl = window.location.protocol + "//" + window.location.host + 
             window.location.pathname + '?chapter=1&page=' + currentPage;
         window.history.pushState({ path: newUrl }, '', newUrl);
 
-        // Reset zoom
         currentZoom = 1;
         imgEl.style.transform = 'scale(1)';
         imgRightEl.style.transform = 'scale(1)';
         imageWrapper.style.transform = 'none';
 
-        // Page turn animation
         if (direction !== undefined) animatePageTurn(direction);
 
         if (isLectureMode) {
-            // Lecture mode: left = even page, right = odd page
             let leftPage = currentPage % 2 === 0 ? currentPage : currentPage - 1;
             if (leftPage < MIN_PAGE) leftPage = MIN_PAGE;
             currentPage = leftPage;
@@ -87,10 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 imgRightEl.style.display = 'none';
             }
-            pageInd.textContent = `p.${leftPage}–${Math.min(rightPage, MAX_PAGE)}`;
-            document.getElementById('chapter-title').textContent = `p.${leftPage}–${rightPage}`;
+            const label = `p.${leftPage}–${Math.min(rightPage, MAX_PAGE)}`;
+            pageInd.textContent = label;
+            floatPage.textContent = label;
+            document.getElementById('chapter-title').textContent = label;
         } else {
-            // Normal mode
             imgEl.src = getImageSrc(currentPage);
             imgRightEl.style.display = 'none';
             pageInd.textContent = `p.${currentPage}`;
@@ -110,13 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Navigation
-    btnPrev.addEventListener('click', () => {
-        loadPage(currentPage - (isLectureMode ? 2 : 1), -1);
-    });
-    btnNext.addEventListener('click', () => {
-        loadPage(currentPage + (isLectureMode ? 2 : 1), 1);
-    });
+    function goNext() { loadPage(currentPage + (isLectureMode ? 2 : 1), 1); }
+    function goPrev() { loadPage(currentPage - (isLectureMode ? 2 : 1), -1); }
+
+    // Header nav
+    btnPrev.addEventListener('click', goPrev);
+    btnNext.addEventListener('click', goNext);
+
+    // Floating nav
+    floatPrev.addEventListener('click', goPrev);
+    floatNext.addEventListener('click', goNext);
 
     // Mode toggle
     btnMode.addEventListener('click', () => {
@@ -125,14 +128,51 @@ document.addEventListener('DOMContentLoaded', () => {
         btnMode.classList.toggle('active', isLectureMode);
         modeIcon.textContent = isLectureMode ? '📝' : '📖';
         modeLabel.textContent = isLectureMode ? '解説モード' : '講義モード';
+        
+        // Show/hide fullscreen button and floating nav
+        btnFullscreen.style.display = isLectureMode ? 'inline-flex' : 'none';
+        floatingNav.style.display = isLectureMode ? 'block' : 'none';
+        
+        // Exit fullscreen when switching to normal mode
+        if (!isLectureMode && document.fullscreenElement) {
+            document.exitFullscreen();
+        }
         loadPage(currentPage);
+    });
+
+    // Fullscreen toggle
+    btnFullscreen.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().then(() => {
+                document.body.classList.add('fullscreen-mode');
+                btnFullscreen.textContent = '✕';
+                btnFullscreen.title = '全画面解除';
+            });
+        } else {
+            document.exitFullscreen().then(() => {
+                document.body.classList.remove('fullscreen-mode');
+                btnFullscreen.textContent = '⛶';
+                btnFullscreen.title = '全画面';
+            });
+        }
+    });
+
+    // Handle ESC exiting fullscreen
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+            document.body.classList.remove('fullscreen-mode');
+            btnFullscreen.textContent = '⛶';
+            btnFullscreen.title = '全画面';
+        }
     });
 
     // Keyboard
     document.addEventListener('keydown', (e) => {
-        const step = isLectureMode ? 2 : 1;
-        if (e.key === 'ArrowLeft') loadPage(currentPage - step, -1);
-        else if (e.key === 'ArrowRight') loadPage(currentPage + step, 1);
+        if (e.key === 'ArrowLeft') goPrev();
+        else if (e.key === 'ArrowRight') goNext();
+        else if (e.key === 'f' || e.key === 'F') {
+            if (isLectureMode) btnFullscreen.click();
+        }
     });
 
     loadPage(currentPage);

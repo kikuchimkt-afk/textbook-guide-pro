@@ -187,7 +187,10 @@
 .lecture-mode #textbook-img,
 .lecture-mode #textbook-img-right {
     max-width: 49%;
+    max-height: calc(100vh - 80px);
     height: auto;
+    width: auto;
+    object-fit: contain;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transform: none !important;
 }
@@ -199,6 +202,56 @@
     left: 50%;
     transform: translateX(-50%);
     right: auto;
+}
+
+/* 全画面モード: ヘッダー非表示 */
+.fullscreen-mode .viewer-header {
+    display: none;
+}
+.fullscreen-mode .viewer-container {
+    height: 100vh;
+}
+
+/* フローティングナビ */
+.floating-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+.float-btn {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 100px;
+    background: rgba(0,0,0,0.15);
+    border: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 8px;
+}
+.float-btn:hover {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+.float-prev { left: 8px; }
+.float-next { right: 8px; }
+.float-page {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /* ページめくりアニメーション */
