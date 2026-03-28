@@ -366,3 +366,24 @@
     content: '📱';
 }
 
+/* ===== JSXGraph グラフ用紙スタイル ===== */
+.graph-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.jxgbox {
+    border: 2px solid #aab !important;
+    border-radius: 4px !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+/* グラフ下のキャプション */
+.graph-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.3rem;
+    font-style: italic;
+}

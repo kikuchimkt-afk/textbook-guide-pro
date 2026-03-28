@@ -691,6 +691,7 @@ guideData["36"] = {
             ・3人班 12班，4人班 0班（$12 \\times 3 + 0 \\times 4 = 36$）<br><br>
             <small>💡 4人班の数を $x$ 班，3人班の数を $y$ 班とすると，$4x + 3y = 36$ という式で表せます。</small>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a03601" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
     `
 };
 
@@ -753,6 +754,7 @@ guideData["39"] = {
             💡 このように2つの方程式を組にしたものを<strong>連立方程式</strong>といい，<br>
             両方を成り立たせる文字の値の組を<strong>連立方程式の解</strong>といいます。
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a03977" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -800,6 +802,7 @@ guideData["41"] = {
             💡 $y$ をふくむ連立方程式から，$y$ をふくまない方程式③を導くことを，<br>
             <strong>$y$ を消去する</strong>といいます。
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04101" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
     `
 };
 
@@ -855,6 +858,7 @@ guideData["43"] = {
             ①＋②'：$11x = 11$ → $x = 1$<br>
             ②に代入：$2 - y = 4$ → <span class="ans">$(x, y) = (1, -2)$</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04377" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -883,6 +887,7 @@ guideData["44"] = {
             ①に代入：$y = 3 - 2 = 1$<br>
             <span class="ans">$(x, y) = (3, 1)$</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04477" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -915,6 +920,7 @@ guideData["45"] = {
             $y = 8 - 11 = -3$ → <span class="ans">$(x, y) = (2, -3)$</span><br><br>
             <small>💡 ①を3倍して加減法で解くこともできます。どちらでもOK！</small>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04577" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -940,6 +946,7 @@ guideData["46"] = {
             ①'×2−②'：$-15y = 30$ → $y = -2$<br>
             $x + 14 = 13$ → $x = -1$ → <span class="ans">$(x, y) = (-1, -2)$</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04677" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -975,6 +982,7 @@ guideData["47"] = {
             <strong>(4)</strong> $\\begin{cases} -20x + 10y = 10 \\\\ 500x = 200(y - 3) \\end{cases}$<br>
             ①÷10：$-2x + y = 1$，②：$5x - 2y = -6$ → <span class="ans">$(x, y) = (-4, -7)$</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04777" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -1014,6 +1022,7 @@ guideData["48"] = {
             ②'−①'：$y = 8$，$x = -6$<br>
             → <span class="ans">$(x, y) = (-6, 8)$</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04877" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -1029,6 +1038,7 @@ guideData["49"] = {
             <span class="ans">得点の情報だけでは本数は1通りに決まりません。<br>
             「あわせて8本決めた」という情報が加わると，連立方程式で解けます！</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a04901" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
     `
 };
 
@@ -1089,6 +1099,7 @@ guideData["52"] = {
             確認：$4 + 6 = 10$ ✓，$130 \\times 4 + 100 \\times 6 = 520 + 600 = 1120$ ✓<br><br>
             <span class="ans">プリン 4個，ゼリー 6個</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05277" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -1110,6 +1121,7 @@ guideData["53"] = {
             <span class="ans">先月：お茶 150本，スポーツドリンク 250本</span><br>
             <small>💡 今月売れたのは，お茶 120本，スポーツドリンク 225本です。</small>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05377" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -1134,6 +1146,7 @@ guideData["54"] = {
             <span class="ans">$y = -10$ km → 道のりが負の値になり，問題にあっていない！</span><br><br>
             <small>⚠️ 連立方程式を使って問題を解くとき，その解が問題にあっているかどうか確かめる必要があります。</small>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05401" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
     `
 };
 
@@ -1172,6 +1185,7 @@ guideData["55"] = {
             ①×7から：$x = 1300$，$y = 1800$<br>
             <span class="ans">シャツ 1300円，帽子 1800円</span>
         </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05577" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
     `
 };
 
@@ -1224,45 +1238,1213 @@ guideData["56"] = {
     `
 };
 
-guideData["57"] = {
-    title: "p.57 章末問題「学びをたしかめよう」② — 問題6〜8",
+guideData["58"] = {
+    title: "p.58 章末問題「学びを身につけよう」① — 1〜4",
     content: `
-        <h2>6　方程式 $x + y = 4x + 3y = 1$ を解きなさい</h2>
+        <h2>1　次の連立方程式を解きなさい</h2>
         <div class="explanation-block">
-            $\\begin{cases} x + y = 1 & \\cdots① \\\\ 4x + 3y = 1 & \\cdots② \\end{cases}$<br><br>
-            ①×3：$3x + 3y = 3$<br>
-            ②−①×3：$x = -2$<br>
-            $-2 + y = 1$ → $y = 3$<br><br>
-            <span class="ans">$(x, y) = (-2, 3)$</span>
+            (1) $\\begin{cases} x+y=8 \\\\ x-y=-2 \\end{cases}$ → ①+②より $2x=6, x=3$。<span class="ans">$(3, 5)$</span><br><br>
+            (2) $\\begin{cases} 2x+6y=3 \\\\ 6x+3y=4 \\end{cases}$ → ②×2−①より $10x=5, x=\\frac{1}{2}$。<span class="ans">$(\\frac{1}{2}, \\frac{1}{3})$</span><br><br>
+            (3) $\\begin{cases} 4x-3y=50 \\\\ 3x-2y=50 \\end{cases}$ → ①×2−②×3より $-x=-50, x=50$。<span class="ans">$(50, 50)$</span><br><br>
+            (4) $\\begin{cases} y=3x-5 \\\\ x+y=7 \\end{cases}$ → $x+(3x-5)=7$。<span class="ans">$(3, 4)$</span><br><br>
+            (5) $\\begin{cases} y=2x+3 \\\\ y=6x-1 \\end{cases}$ → $2x+3=6x-1$。<span class="ans">$(1, 5)$</span><br><br>
+            (6) $\\begin{cases} 10=5a+b \\\\ 1=2a+b \\end{cases}$ → ①−②より $9=3a, a=3$。<span class="ans">$(a, b) = (3, -5)$</span><br><br>
+            (7) $\\begin{cases} 3(x-2y)=y-17 \\\\ 6x+5y=4 \\end{cases}$ → ①を整理 $3x-7y=-17$。<span class="ans">$(-1, 2)$</span><br><br>
+            (8) $\\begin{cases} 3x-2y=3 \\\\ \\frac{1}{2}x+\\frac{3}{4}y=7 \\end{cases}$ → ②×4より $2x+3y=28$。<span class="ans">$(5, 6)$</span><br><br>
+            (9) $\\begin{cases} 0.5x-0.3y=1 \\\\ x=3y+2 \\end{cases}$ → ①×10より $5x-3y=10$。<span class="ans">$(2, 0)$</span><br><br>
+            (10) $\\begin{cases} 5x+2y=2(x+2y)+8 \\\\ \\frac{x}{4}+\\frac{y}{3}=\\frac{1}{6} \\end{cases}$ → 整理して $\\{ 3x-2y=8, 3x+4y=2 \\}$。<span class="ans">$(2, -1)$</span>
         </div>
-        <h2>7　りんごとももの問題</h2>
+        <h2>2　次の方程式を解きなさい</h2>
         <div class="explanation-block">
-            <strong>1個100円のりんごと，1個150円のももをあわせて10個買うと，代金は1200円になりました。</strong><br><br>
-            (1) りんごを $x$ 個，ももを $y$ 個とすると：<br>
-            $\\begin{cases} x + y = 10 & \\cdots① \\\\ 100x + 150y = 1200 & \\cdots② \\end{cases}$<br><br>
-            (2) ①×100：$100x + 100y = 1000$<br>
-            ②−①×100：$50y = 200$ → $y = 4$，$x = 6$<br><br>
-            <span class="ans">りんご 6個，もも 4個</span>
+            (1) $4x-y-7 = 3x+2y = -1$ → $\\{ 4x-y=6, 3x+2y=-1 \\}$。<span class="ans">$(x, y) = (1, -2)$</span><br>
+            (2) $\\frac{x+y}{4} = \\frac{x+1}{3} = 1$ → $\\{ x+y=4, x+1=3 \\}$。<span class="ans">$(x, y) = (2, 2)$</span><br>
+            (3) $3x+2y=5+3y=2x+11$ → $\\{ 3x+2y=2x+11, 5+3y=2x+11 \\}$。<span class="ans">$(x, y) = (3, 4)$</span>
         </div>
-        <h2>8　入学者数の問題</h2>
+        <h2>3　a, b の値</h2>
         <div class="explanation-block">
-            <strong>A小学校とB小学校から入学。昨年はあわせて500人。<br>
-            今年は，A小学校は80%，B小学校は120%になったので，あわせて480人。</strong><br><br>
-            昨年のA小学校を $x$ 人，B小学校を $y$ 人とすると：<br>
-            $\\begin{cases} x + y = 500 & \\cdots① \\\\ 0.8x + 1.2y = 480 & \\cdots② \\end{cases}$<br><br>
-            ②×10：$8x + 12y = 4800$ ②'<br>
-            ①×8：$8x + 8y = 4000$<br>
-            ②'−①×8：$4y = 800$ → $y = 200$，$x = 300$<br><br>
-            確認：$0.8 \\times 300 + 1.2 \\times 200 = 240 + 240 = 480$ ✓<br><br>
-            <span class="ans">昨年：A小学校 300人，B小学校 200人</span>
+            $x=-3, y=5$ を代入すると<br>
+            $\\begin{cases} -3a+30=6 \\\\ 9+5b=34 \\end{cases}$ → <span class="ans">$a=8, b=5$</span>
+        </div>
+        <h2>4　2けたの正の整数</h2>
+        <div class="explanation-block">
+            十の位を $x$、一の位を $y$ とすると<br>
+            $\\begin{cases} 10x+y = 4(x+y)+3 \\\\ 10y+x = 10x+y+9 \\end{cases}$<br>
+            整理して $\\{ 2x-y=1, -x+y=1 \\}$ → $x=2, y=3$<br>
+            <span class="ans">もとの整数: 23</span>
         </div>
     `
 };
 
-// 58ページ以降のプレースホルダー
-for (let i = 58; i <= 234; i++) {
+guideData["59"] = {
+    title: "p.59 章末問題「学びを身につけよう」② — 5〜7",
+    content: `
+        <h2>5　生徒数の問題</h2>
+        <div class="explanation-block">
+            昨年の自転車通学を $x$ 人、それ以外を $y$ 人とすると<br>
+            $\\begin{cases} x + y = 90 \\\\ 1.1x + 0.8y = 87 \\end{cases}$<br>
+            ②×10より $11x + 8y = 870$<br>
+            ①×8で $8x + 8y = 720$ を引くと $3x=150$ → $x=50, y=40$<br>
+            <span class="ans">昨年の自転車通学 50人、それ以外の通学 40人</span>
+        </div>
+        <h2>6　列車の速さと長さ</h2>
+        <div class="explanation-block">
+            列車の長さを $x$ m、速さを秒速 $y$ m とすると<br>
+            ・鉄橋（渡り始めてから終わりまで）：$1260 + x = 60y$<br>
+            ・トンネル（入り始めてから出るまで）：$2010 + x = 90y$<br>
+            引くと $30y = 750$ → 秒速 $y = 25$ m。代入して $x = 240$ m。<br>
+            秒速25m ＝ 時速90km。<br>
+            <span class="ans">列車の長さ 240m、時速 90km</span>
+        </div>
+        <h2>7　勘者御伽双紙（碁石の問題）</h2>
+        <div class="explanation-block">
+            (い)の袋に入れた回数を $x$ 回、(ろ)の袋に入れた回数を $y$ 回とすると<br>
+            「はい」という回数：$x + y = 13$<br>
+            碁石の総数：$2x + y = 21$<br>
+            引くと $x = 8, y = 5$<br>
+            碁石の数は (い)が $2 \\times 8 = 16$ 個、(ろ)が $1 \\times 5 = 5$ 個。<br>
+            <span class="ans">(い)の袋 16個、(ろ)の袋 5個</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05901" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+// ======================== 第3章 ========================
+guideData["60"] = {
+    title: "p.60 第3章 章導入「水面の高さはどう変わるかな？」",
+    content: `
+        <h2>第3章 一次関数</h2>
+        <div class="explanation-block">
+            <strong>水面の高さはどう変わるかな？</strong><br><br>
+            1日目は、からの水そうに水を入れます。<br>
+            1分間に2cmの割合で水面が高くなります。<br><br>
+            (1) $x$ の値が1増えると、$y$ の値はどうなるでしょうか。<br>
+            <span class="ans">$y$ の値は2増える。</span><br><br>
+            (2) $x$ の値が2倍、3倍、4倍になると、$y$ の値はどうなるでしょうか。<br>
+            <span class="ans">$y$ の値も2倍、3倍、4倍になる。</span><br><br>
+            (3) $x$ と $y$ の関係を式に表しましょう。<br>
+            <span class="ans">$y = 2x$</span><br><br>
+            <div class="tip">
+                <strong>ふりかえり：</strong> $y = ax$ で表されるとき、$y$ は $x$ に比例するといいます。
+            </div>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a06001" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["61"] = {
+    title: "p.61 1節 一次関数とグラフ — 水そうの問題(2日目)",
+    content: `
+        <h2>1節 一次関数とグラフ</h2>
+        <div class="explanation-block">
+            <strong>話しあおう：2日目の朝、水そうに水を入れる</strong><br><br>
+            2日目は、すでに底から 8cm の高さまで水がはいっています。<br>
+            ここから1分間に 2cm の割合で水を入れます。<br><br>
+            水を入れてからの時間 $x$ 分と、高さ $y$ cm の関係についてどんなことがいえるでしょうか。<br><br>
+            表を完成させると：<br>
+            $x$: 0, 1, 2, 3, 4, ...<br>
+            $y$: 8, 10, 12, 14, 16, ...<br><br>
+            <span class="ans">・$x$ が1増えるごとに、$y$ は2ずつ増える。<br>
+            ・前ページ（1日目）の高さに、常に 8cm をたした値になっている。</span>
+        </div>
+    `
+};
+
+guideData["62"] = {
+    title: "p.62 一次関数の定義・式の意味",
+    content: `
+        <h2>1　一次関数</h2>
+        <div class="explanation-block">
+            <strong>1日目と2日目の関係</strong><br><br>
+            1日目：$y = 2x$<br>
+            2日目：$y = 2x + 8$<br><br>
+            同じ $x$ の値に対応する $y$ の値は、1日目より2日目の方が常に8大きくなっています。<br><br>
+            <div class="formula-box">
+                $y$ が $x$ の関数で、<br>
+                <div style="text-align: center; font-size: 1.2em; font-weight: bold; margin: 10px 0;">
+                $y = ax + b$ ($a, b$ は定数)
+                </div>
+                のようになるとき、<strong>$y$ は $x$ の一関数である</strong>といいます。<br>
+                <small>（$y$ が $x$ の一次式で表される）</small>
+            </div>
+        </div>
+    `
+};
+
+guideData["63"] = {
+    title: "p.63 比例との関係・問1・例1",
+    content: `
+        <h2>比例は一次関数の特別な場合</h2>
+        <div class="explanation-block">
+            一次関数 $y = ax + b$ で、$b = 0$ の場合、$y = ax$ となり比例になります。<br>
+            つまり、比例は一次関数の特別な場合です。
+        </div>
+        <h2>問1　一次関数の判別</h2>
+        <div class="explanation-block">
+            次の式で一次関数であるものをすべて選びなさい。<br>
+            (ア) $y = 8x - 1$ → 一次関数。$x$に比例する部分は $8x$<br>
+            (イ) $y = \\dfrac{4}{x}$ → 反比例（一次関数ではない）<br>
+            (ウ) $y = \\dfrac{1}{3}x$ → 一次関数（比例）。$x$に比例する部分は $\\frac{1}{3}x$<br>
+            (エ) $y = 5 - 7x$ → 一次関数（$y = -7x + 5$）。$x$に比例する部分は $-7x$<br>
+            <span class="ans">答え：(ア), (ウ), (エ)</span>
+        </div>
+        <h2>例1・問2　高度と気温の関係</h2>
+        <div class="explanation-block">
+            例1：高度が1km増すごとに気温が6℃低くなる。<br>
+            地上($0km$)の気温が 20℃ のとき：$y = 20 - 6x$（$y = -6x + 20$）<br><br>
+            <strong>問2</strong> 地上からの高度が次のときの気温を求めなさい。<br>
+            (1) 1km → $20 - 6 \\times 1$<span class="ans">$ = 14$℃</span><br>
+            (2) 4km → $20 - 6 \\times 4$<span class="ans">$ = -4$℃</span><br>
+            (3) 8.8km → $20 - 6 \\times 8.8 = 20 - 52.8$<span class="ans">$ = -32.8$℃</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a06377" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `
+};
+
+guideData["64"] = {
+    title: "p.64 練習問題・数学ライブラリー",
+    content: `
+        <h2>練習問題</h2>
+        <div class="explanation-block">
+            <strong>1　一次関数であるものを選ぶ</strong><br>
+            (ア) $y = -8x + 3$ → <span class="ans">一次関数（○）</span><br>
+            (イ) $y = -\\dfrac{12}{x}$ → ✗<br>
+            (ウ) $y = \\dfrac{3}{2}(x - 2) = \\dfrac{3}{2}x - 3$ → <span class="ans">一次関数（○）</span><br><br>
+            
+            <strong>2　文章題から一次関数を選ぶ</strong><br>
+            (ア) 300gから $x$ g使った残り $y$ g：$y = 300 - x$<br>
+            (イ) 10kmの道のりを時速 $x$ km：$y = \\dfrac{10}{x}$<br>
+            (ウ) 時速4kmで $x$ 時間：$y = 4x$<br>
+            (エ) 縦 $x$、横4cmの長方形の周囲：$y = 2(x + 4) = 2x + 8$<br>
+            (オ) 半径 $x$ の球の表面積：$y = 4\\pi x^2$<br>
+            <span class="ans">答え：(ア), (ウ), (エ)</span>
+        </div>
+        <h2>数学ライブラリー：雷さまはどこ？</h2>
+        <div class="explanation-block">
+            音の速さ $y$ (m/s) は気温 $x$ (℃) の一次関数：$y = 0.6x + 331$<br>
+            気温15℃のとき、$y = 0.6 \\times 15 + 331 = 340$ m/s。<br>
+            雷光から10秒後に音が聞こえたら、$340 \\times 10 = 3400$ m 離れている。
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a06401" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["65"] = {
+    title: "p.65 2 一次関数の値の変化",
+    content: `
+        <h2>2　一次関数の値の変化</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> $y = 2x + 1$ の表を完成させ、増加量を比べる。<br>
+            $x$が1から4に増える（増加量3）とき、$y$は3から9に増える（増加量6）。<br>
+            $y$の増加量 ÷ $x$の増加量 = $6 \\div 3 = 2$<br>
+            常に、$y$の増加量は$x$の増加量の2倍になる。<br><br>
+            <strong>問1</strong> $x$ が5から9に変わるとき：<br>
+            $x=5$ のとき $y=11$<br>
+            $x=9$ のとき $y=19$<br>
+            $x$の増加量は $9 - 5 = 4$、$y$の増加量は $19 - 11 = 8$。<br>
+            <span class="ans">$y$の増加量は$x$の増加量の 2倍 になります。</span>
+        </div>
+        <h2>変化の割合</h2>
+        <div class="explanation-block">
+            $x$の増加量に対する $y$の増加量の割合を <strong>変化の割合</strong> といいます。<br>
+            <div class="formula-box">
+                変化の割合 $= \\dfrac{y\\text{の増加量}}{x\\text{の増加量}}$
+            </div>
+            一次関数 $y = ax + b$ では、変化の割合は常に一定で $a$ に等しい。
+        </div>
+    `
+};
+
+guideData["66"] = {
+    title: "p.66 a<0の場合の変化の割合・問2",
+    content: `
+        <h2>a < 0 の場合の変化の割合</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> $y = -2x + 7$ について。<br>
+            (1) $x$ が1から4まで変わるとき：<br>
+            $x=1$ で $y=5$、$x=4$ で $y=-1$。<br>
+            $x$の増加量は3、$y$の増加量は $-1 - 5 = -6$。<br>
+            変化の割合 $= \\dfrac{-6}{3} = -2$<br>
+            いずれの区間でも変化の割合は一定で $-2$ になる。
+        </div>
+        <h2>結論</h2>
+        <div class="explanation-block">
+            一次関数 $y = ax + b$ では、変化の割合は常に $a$ に等しい。<br>
+            ・$a > 0$ のとき、$x$が増加すると$y$も増加する。<br>
+            ・$a < 0$ のとき、$x$が増加すると$y$は減少する。
+        </div>
+        <h2>問2　変化の割合から増加量を求める</h2>
+        <div class="explanation-block">
+            一次関数 $y = \\dfrac{2}{3}x + 5$ について、$y$の増加量を求めなさい。<br>
+            変化の割合 $a = \\dfrac{2}{3}$。<br>
+            (1) $x$の増加量が1のとき：<br>
+            <span class="ans">$y$の増加量 = $\\dfrac{2}{3} \\times 1 = \\dfrac{2}{3}$</span><br>
+            (2) $x$の増加量が3のとき：<br>
+            <span class="ans">$y$の増加量 = $\\dfrac{2}{3} \\times 3 = 2$</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a06677" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `
+};
+
+guideData["67"] = {
+    title: "p.67 比例・反比例の変化の割合、練習問題",
+    content: `
+        <h2>ふりかえり：反比例の変化の割合</h2>
+        <div class="explanation-block">
+            反比例 $y = \\dfrac{6}{x}$ において：<br>
+            ・$x$ が1から2へ変わるとき $\\dfrac{3 - 6}{2 - 1} = -3$<br>
+            ・$x$ が2から3へ変わるとき $\\dfrac{2 - 3}{3 - 2} = -1$<br>
+            <span class="ans">反比例では、調べる区間によって変化の割合が異なり、一定ではありません。</span>
+        </div>
+        <h2>練習問題</h2>
+        <div class="explanation-block">
+            <strong>1　yの増加量と変化の割合</strong><br>
+            $x$ が2から6へ（+4）。$y$ が-5から3へ（+8）。<br>
+            <span class="ans">変化の割合 $= \\dfrac{8}{4} = 2$</span><br><br>
+            <strong>2　yは増加するか、減少するか</strong><br>
+            (1) $y = 7x + 2$：$a=7 > 0$ なので <span class="ans">増加する（変化の割合7）</span><br>
+            (2) $y = -3x + 4$：$a=-3 < 0$ なので <span class="ans">減少する（変化の割合-3）</span><br>
+            (3) $y = \\dfrac{1}{5}x - 6$：$a=\\dfrac{1}{5} > 0$ なので <span class="ans">増加する（変化の割合$\\dfrac{1}{5}$）</span><br><br>
+            <strong>3　xの増加量からyの増加量を求める</strong><br>
+            $y = -\\dfrac{3}{4}x + 1$ で、$x$の増加量が8のとき。<br>
+            <span class="ans">$y$の増加量 $= -\\dfrac{3}{4} \\times 8 = -6$</span>
+        </div>
+    `
+};
+
+guideData["68"] = {
+    title: "p.68 ③一次関数のグラフ — ひろげよう",
+    content: `
+        <h2>③一次関数のグラフ</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> $y = 2x + 3$ について、表を完成させましょう。<br>
+            $x$: -3, -2, -1, 0, 1, 2, 3<br>
+            $y$: -3, -1, 1, 3, 5, 7, 9<br><br>
+            <strong>比較：</strong> $y = 2x$ の値くらべると、対応する $y$ の値はいつでも $y=2x+3$ の方が <strong>3だけ大きく</strong> なっています。
+        </div>
+        <h2>グラフから予想されること</h2>
+        <div class="explanation-block">
+            このことから、一次関数 $y = 2x + 3$ のグラフは、比例のグラフ $y = 2x$ に <strong>平行な直線</strong> になることが予想されます。
+        </div>
+        <div class="graph-container">
+            <div id="graph-68" class="jxgbox"></div>
+            <div class="graph-caption">赤：$y = 2x + 3$　青：$y = 2x$</div>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-68', {
+            boundingbox: [-5, 10, 5, -5], width: 300, height: 300
+        });
+        if (!b) return;
+        // y = 2x (青・破線)
+        GraphHelper.drawLine(b, 2, 0, { color: '#3498db', dash: 2, label: 'y=2x', labelX: 1.5 });
+        // y = 2x + 3 (赤・実線)
+        GraphHelper.drawLine(b, 2, 3, { color: '#e74c3c', label: 'y=2x+3', labelX: 1.5 });
+        // 切片の点
+        GraphHelper.drawPoint(b, 0, 3, { name: '(0, 3)', color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 0, 0, { name: 'O', color: '#3498db', size: 0 });
+    }
+};
+
+guideData["69"] = {
+    title: "p.69 グラフの平行移動と切片・問1・問2",
+    content: `
+        <h2>グラフの平行移動</h2>
+        <div class="explanation-block">
+            一次関数 $y = 2x + 3$ のグラフは、比例のグラフ $y = 2x$ を、<strong>上方に （$y$軸の正の方向に）3だけ平行移動</strong> した直線になります。<br>
+            このため、$y$軸上の点 $(0, 3)$ を通ります。
+        </div>
+        <h2>切片（せっぺん）</h2>
+        <div class="explanation-block">
+            直線 $y = ax + b$ と $y$軸との交点 $(0, b)$ の $y$座標 $b$ を、この直線の <strong>切片</strong> といいます。<br>
+            （グラフは直線 $y = ax$ に平行で、切片 $b$ の点を通ります）
+        </div>
+        <div class="graph-container">
+            <div id="graph-69" class="jxgbox"></div>
+            <div class="graph-caption">青破線：$y=2x$　赤：$y=2x+3$（+3移動）　緑：$y=2x-2$（-2移動）</div>
+        </div>
+        <h2>問1　グラフをかきなさい</h2>
+        <div class="explanation-block">
+            <span class="ans">(1) $y = 2x - 2$： $y = 2x$ の直線を下（$y$軸負方向）に2平行移動</span><br>
+            <span class="ans">(2) $y = -2x + 4$： $y = -2x$ の直線を上（$y$軸正方向）に4平行移動</span><br>
+            <span class="ans">(3) $y = -2x - 3$： $y = -2x$ の直線を下（$y$軸負方向）に3平行移動</span>
+        </div>
+        <h2>問2　切片をいいなさい</h2>
+        <div class="explanation-block">
+            (1) $y = -3x + 5$ → 切片 <span class="ans">$5$</span><br>
+            (2) $y = 2x - 4$ → 切片 <span class="ans">$-4$</span><br>
+            (3) $y = -5x$ → 切片 <span class="ans">$0$</span>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a06901" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-69', {
+            boundingbox: [-5, 10, 5, -6], width: 300, height: 300
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, 2, 0, { color: '#3498db', dash: 2, label: 'y=2x', labelX: 2 });
+        GraphHelper.drawLine(b, 2, 3, { color: '#e74c3c', label: 'y=2x+3', labelX: -2.5 });
+        GraphHelper.drawLine(b, 2, -2, { color: '#2ecc71', label: 'y=2x-2', labelX: 2.5 });
+        GraphHelper.drawPoint(b, 0, 3, { name: '(0,3)', color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 0, -2, { name: '(0,-2)', color: '#2ecc71' });
+    }
+};
+
+guideData["70"] = {
+    title: "p.70 aの値とグラフの関係・直線の傾き",
+    content: `
+        <h2>ひろげよう：aの値とグラフの関係</h2>
+        <div class="explanation-block">
+            $y = x + 2, y = 2x + 2, y = 3x + 2$<br>
+            これらはすべて切片が 2 で、点 $(0, 2)$ を通る直線です。<br>
+            $a$ の値が 1, 2, 3 と大きくなるほど、<strong>グラフがより起き上がった（急な）形</strong> になっています。<br>
+            $a$ の値によって、直線の傾きぐあいが決まります。
+        </div>
+        <div class="graph-container">
+            <div id="graph-70" class="jxgbox"></div>
+            <div class="graph-caption">切片2が同じで傾きが異なる3本の直線</div>
+        </div>
+        <h2>直線の傾き</h2>
+        <div class="explanation-block">
+            直線 $y = ax + b$ で、$a$ の値を、この直線の <strong>傾き</strong> といいます。<br>
+            $a$（傾き）は、$x$の増加量が1のときの $y$の増加量を示しています。<br><br>
+            例：$y = 3x + 2$ の場合、傾きは3。<br>
+            グラフ上で右へ1進むと、上へ3進む（右上がり）ことを示しています。
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07001" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-70', {
+            boundingbox: [-4, 8, 4, -4], width: 280, height: 280
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, 1, 2, { color: '#2ecc71', label: 'y=x+2', labelX: 2 });
+        GraphHelper.drawLine(b, 2, 2, { color: '#3498db', label: 'y=2x+2', labelX: 1.5 });
+        GraphHelper.drawLine(b, 3, 2, { color: '#e74c3c', label: 'y=3x+2', labelX: 1 });
+        GraphHelper.drawPoint(b, 0, 2, { name: '(0, 2)', color: '#333' });
+    }
+};
+
+guideData["71"] = {
+    title: "p.71 例1 (a<0の傾き)・問3",
+    content: `
+        <h2>例1　傾きが負（a < 0）の直線</h2>
+        <div class="explanation-block">
+            直線 $y = -2x + 1$ の場合、傾きは $-2$ です。<br>
+            これは、グラフ上で <strong>右へ1進むと、下へ2進む</strong>（-$y$方向へ2進む）ことを示します。<br>
+            このため、直線は <strong>右下がり</strong> になります。
+        </div>
+        <h2>まとめ：グラフの形</h2>
+        <div class="explanation-block">
+            ・$a > 0$（正の数）： グラフは <strong>右上がり</strong><br>
+            ・$a < 0$（負の数）： グラフは <strong>右下がり</strong><br>
+            <br>
+            <div class="tip">
+                変化の割合 ＝ 直線の傾き ＝ $a$
+            </div>
+        </div>
+        <div class="graph-container">
+            <div id="graph-71" class="jxgbox"></div>
+            <div class="graph-caption">赤（右上がり）：$y=2x+1$　青（右下がり）：$y=-2x+1$</div>
+        </div>
+        <h2>問3　傾き・切片とグラフの形</h2>
+        <div class="explanation-block">
+            (1) $y = 3x - 4$<br>
+            <span class="ans">傾き $3$、切片 $-4$、右上がり</span><br>
+            (2) $y = -x + 6$<br>
+            <span class="ans">傾き $-1$、切片 $6$、右下がり</span><br>
+            (3) $y = \\\\dfrac{4}{5}x - 1$<br>
+            <span class="ans">傾き $\\\\dfrac{4}{5}$、切片 $-1$、右上がり</span><br>
+            (4) $y = -\\\\dfrac{3}{2}x + 1$<br>
+            <span class="ans">傾き $-\\\\dfrac{3}{2}$、切片 $1$、右下がり</span>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07177" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-71', {
+            boundingbox: [-5, 6, 5, -6], width: 280, height: 280
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, 2, 1, { color: '#e74c3c', label: 'y=2x+1', labelX: 1.5 });
+        GraphHelper.drawLine(b, -2, 1, { color: '#3498db', label: 'y=-2x+1', labelX: -2 });
+        GraphHelper.drawPoint(b, 0, 1, { name: '(0,1)', color: '#333' });
+        GraphHelper.drawSlopeGuide(b, 0, 1, 1, 2, { color: '#e74c3c', hLabel: '1', vLabel: '2' });
+        GraphHelper.drawSlopeGuide(b, 0, 1, 1, -2, { color: '#3498db', hLabel: '1', vLabel: '-2' });
+    }
+};
+
+
+guideData["72"] = {
+    title: "p.72 例2・問4 — 一次関数のグラフのかき方",
+    content: `
+        <h2>例2　グラフのかき方</h2>
+        <div class="explanation-block">
+            <strong>手順：</strong> まず切片を取り、そこから開始して傾きの分だけ移動する点を取り、直線をひく。<br><br>
+            (1) $y = 3x - 4$<br>
+            ・切片 $-4$ より、点 $(0, -4)$ をとる。<br>
+            ・傾き $3$ より、右へ1、上へ3進んだ点 $(1, -1)$ をとる。<br><br>
+            (2) $y = -\\dfrac{3}{2}x + 1$<br>
+            ・切片 $1$ より、点 $(0, 1)$ をとる。<br>
+            ・傾き $-\\dfrac{3}{2}$ より、右へ2、下へ3進んだ点 $(2, -2)$ をとる。
+        </div>
+        <div class="graph-container">
+            <div id="graph-72" class="jxgbox"></div>
+            <div class="graph-caption">赤：$y = 3x - 4$　青：$y = -\\frac{3}{2}x + 1$</div>
+        </div>
+        <h2>問4　グラフをかきなさい</h2>
+        <div class="explanation-block">
+            (1) $y = x - 3$ → <span class="ans">切片 $-3$、傾き $1$ の直線</span><br>
+            (2) $y = 3x + 5$ → <span class="ans">切片 $5$、傾き $3$ の直線</span><br>
+            (3) $y = \\dfrac{1}{4}x + 1$ → <span class="ans">切片 $1$、傾き $\\frac{1}{4}$ (右4上1)の直線</span><br>
+            (4) $y = -2x + 3$ → <span class="ans">切片 $3$、傾き $-2$ の直線</span><br>
+            (5) $y = -\\dfrac{2}{3}x - 4$ → <span class="ans">切片 $-4$、傾き $-\\frac{2}{3}$ (右3下2)の直線</span>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07277" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-72', {
+            boundingbox: [-5, 6, 5, -6], width: 300, height: 300
+        });
+        if (!b) return;
+        // y = 3x - 4
+        GraphHelper.drawLine(b, 3, -4, { color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 0, -4, { name: '(0,-4)', color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 1, -1, { name: '(1,-1)', color: '#e74c3c' });
+        GraphHelper.drawSlopeGuide(b, 0, -4, 1, 3, { color: '#e74c3c', hLabel: '1', vLabel: '3' });
+        // y = -3/2 x + 1
+        GraphHelper.drawLine(b, -1.5, 1, { color: '#3498db' });
+        GraphHelper.drawPoint(b, 0, 1, { name: '(0,1)', color: '#3498db' });
+        GraphHelper.drawPoint(b, 2, -2, { name: '(2,-2)', color: '#3498db' });
+        GraphHelper.drawSlopeGuide(b, 0, 1, 2, -3, { color: '#3498db', hLabel: '2', vLabel: '-3' });
+    }
+};
+
+guideData["73"] = {
+    title: "p.73 例3・問5・問6 — xの変域とyの変域",
+    content: `
+        <h2>例3　xの変域に制限があるときのグラフ</h2>
+        <div class="explanation-block">
+            一次関数 $y = 2x + 2$ で、$-3 \\leqq x \\leqq 2$ のとき。<br>
+            ・$x = -3$ のとき $y = -4$<br>
+            ・$x = 2$ のとき $y = 6$<br>
+            グラフは線分になり、$y$の変域は <span class="ans">$-4 \\leqq y \\leqq 6$</span> になります。
+        </div>
+        <div class="graph-container">
+            <div id="graph-73" class="jxgbox"></div>
+            <div class="graph-caption">$y = 2x + 2$（$-3 \\leqq x \\leqq 2$）</div>
+        </div>
+        <h2>問5　変域を求めなさい</h2>
+        <div class="explanation-block">
+            一次関数 $y = x - 1$ について。<br>
+            (1) $3 \\leqq x \\leqq 5$<br>
+            $x=3 \\rightarrow y=2$、$x=5 \\rightarrow y=4$。右上がりなのでそのまま対応。<br>
+            <span class="ans">答え： $2 \\leqq y \\leqq 4$</span><br><br>
+            (2) $-4 \\leqq x \\leqq 2$<br>
+            $x=-4 \\rightarrow y=-5$、$x=2 \\rightarrow y=1$。<br>
+            <span class="ans">答え： $-5 \\leqq y \\leqq 1$</span>
+        </div>
+        <h2>問6　傾きが負のときの変域</h2>
+        <div class="explanation-block">
+            一次関数 $y = -\\dfrac{3}{2}x + 4$ について。<br>
+            (1) $4 \\leqq x \\leqq 6$<br>
+            $x=4$ のとき $y=-2$、$x=6$ のとき $y=-5$。<br>
+            傾きが負（右下がり）なので、$x$が大きいとき$y$は小さくなる。<br>
+            <span class="ans">答え： $-5 \\leqq y \\leqq -2$</span><br><br>
+            (2) $-2 \\leqq x \\leqq 2$<br>
+            $x=-2$ のとき $y=7$、$x=2$ のとき $y=1$。<br>
+            <span class="ans">答え： $1 \\leqq y \\leqq 7$</span>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07377" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-73', {
+            boundingbox: [-5, 8, 5, -6], width: 280, height: 280
+        });
+        if (!b) return;
+        // 元の直線（破線、薄い）
+        GraphHelper.drawLine(b, 2, 2, { color: '#ccc', dash: 2, width: 1.5 });
+        // 変域制限付き線分
+        GraphHelper.drawLine(b, 2, 2, { color: '#e74c3c', domain: [-3, 2] });
+    }
+};
+
+guideData["74"] = {
+    title: "p.74 数学ライブラリー「AEDの重要性がわかるグラフ」",
+    content: `
+        <h2>数学ライブラリー：AEDの重要性</h2>
+        <div class="explanation-block">
+            AEDを使用するまでの時間 $x$ (分)と救命の可能性 $y$ (%) のグラフ。<br>
+            ・心停止から1分で使えば救命率は約90%。<br>
+            ・5分たつと約50%まで低下。<br>
+            ・9分（救急車の全国平均到着時間）では10%以下に。<br><br>
+            グラフの傾きが負（右下がり）であることから、時間がたつほど右へ進み、救命率が下方向へ急激に低下することが読み取れます。<br>
+            <span class="ans">一刻も早くAEDを使用することがとても大切です！</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07401" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["75"] = {
+    title: "p.75 ④一次関数の式を求めること・問1",
+    content: `
+        <h2>④一次関数の式を求めること（グラフから）</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> グラフから一次関数の式を求めるには、<strong>切片</strong>と<strong>傾き</strong>を読み取ります。<br>
+            ・グラフが $y$軸と交わる点は $(0, -1)$ だから、切片は $-1$<br>
+            ・右へ2進むと上へ3進むから、傾きは $\\dfrac{3}{2}$<br>
+            したがって、式は <span class="ans">$y = \\dfrac{3}{2}x - 1$</span> となります。
+        </div>
+        <div class="graph-container">
+            <div id="graph-75" class="jxgbox"></div>
+            <div class="graph-caption">グラフから式を読み取る：$y = \\frac{3}{2}x - 1$</div>
+        </div>
+        <h2>問1　グラフから式を求める</h2>
+        <div class="explanation-block">
+            (1) 切片は $1$、右へ1進むと上へ2進む（傾き $2$）<br>
+            <span class="ans">$y = 2x + 1$</span><br><br>
+            (2) 切片は $3$、右へ1進むと下へ1進む（傾き $-1$）<br>
+            <span class="ans">$y = -x + 3$</span><br><br>
+            (3) 切片は $-2$、右へ3進むと上へ1進む（傾き $\\dfrac{1}{3}$）<br>
+            <span class="ans">$y = \\dfrac{1}{3}x - 2$</span>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07577" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-75', {
+            boundingbox: [-5, 5, 5, -5], width: 280, height: 280
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, 1.5, -1, { color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 0, -1, { name: '(0,-1)', color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 2, 2, { name: '(2, 2)', color: '#e74c3c' });
+        GraphHelper.drawSlopeGuide(b, 0, -1, 2, 3, { color: '#3498db', hLabel: '2', vLabel: '3' });
+    }
+};
+
+guideData["76"] = {
+    title: "p.76 傾きと1点の座標から式を求める・問2",
+    content: `
+        <h2>例題1　傾きと1点の座標から式を求める</h2>
+        <div class="explanation-block">
+            傾きが $\\dfrac{3}{5}$ だから、式を $y = \\dfrac{3}{5}x + b$ とします。<br>
+            グラフが点 $(5, 1)$ を通るから、$x=5, y=1$ を代入すると、<br>
+            $1 = \\dfrac{3}{5} \\times 5 + b$<br>
+            $1 = 3 + b$<br>
+            $b = -2$<br>
+            よって、式は <span class="ans">$y = \\dfrac{3}{5}x - 2$</span>
+        </div>
+        <h2>問2　傾きと1点から式を求める</h2>
+        <div class="explanation-block">
+            傾きが $-3$ だから、$y = -3x + b$ とします。<br>
+            点 $(1, 2)$ を通るから、$x=1, y=2$ を代入すると、<br>
+            $2 = -3 \\times 1 + b$<br>
+            $2 = -3 + b$<br>
+            $b = 5$<br>
+            よって、式は <span class="ans">$y = -3x + 5$</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07677" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `
+};
+
+guideData["77"] = {
+    title: "p.77 例題2・問3・問4 — 2点の座標から式を求める",
+    content: `
+        <h2>例題2　2点の座標から式を求める</h2>
+        <div class="explanation-block">
+            点 $(1, 2), (5, -6)$ を通る直線の式：<br>
+            <strong>【解き方① 傾きを先に求める】</strong><br>
+            傾き $a = \\dfrac{-6 - 2}{5 - 1} = \\dfrac{-8}{4} = -2$<br>
+            $y = -2x + b$ に $(1, 2)$ を代入して、$2 = -2 + b \\rightarrow b = 4$<br><br>
+            <strong>【解き方② 連立方程式で解く】</strong><br>
+            $y = ax + b$ に2点の座標を代入して、<br>
+            $\\begin{cases} 2 = a + b \\dots① \\\\ -6 = 5a + b \\dots② \\end{cases}$<br>
+            これを解いて $a = -2, b = 4$。<br><br>
+            どちらの解き方でも、式は <span class="ans">$y = -2x + 4$</span>
+        </div>
+        <h2>問3　2点の座標から式を求める</h2>
+        <div class="explanation-block">
+            2点 $(-1, -4), (3, 8)$ を通る。<br>
+            傾き $a = \\dfrac{8 - (-4)}{3 - (-1)} = \\dfrac{12}{4} = 3$<br>
+            $y = 3x + b$ に $(3, 8)$ を代入し、$8 = 9 + b \\rightarrow b = -1$<br>
+            <span class="ans">$y = 3x - 1$</span>
+        </div>
+        <h2>問4　対応表の値から式を求める</h2>
+        <div class="explanation-block">
+            条件より、グラフは2点 $(-2, -1), (4, 8)$ を通る。<br>
+            傾き $a = \\dfrac{8 - (-1)}{4 - (-2)} = \\dfrac{9}{6} = \\dfrac{3}{2}$<br>
+            $y = \\dfrac{3}{2}x + b$ に $(4, 8)$ を代入し、$8 = 6 + b \\rightarrow b = 2$<br>
+            <span class="ans">$y = \\dfrac{3}{2}x + 2$</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07777" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `
+};
+
+guideData["78"] = {
+    title: "p.78 まとめよう・練習問題",
+    content: `
+        <h2>まとめよう</h2>
+        <div class="explanation-block">
+            一次関数 $y = 2x - 1$ の表、式、グラフの関係性。<br>
+            表、式、グラフのどれか1つがわかれば、そこから他の表現をすべて求めることができます。
+        </div>
+        <h2>練習問題</h2>
+        <div class="explanation-block">
+            <strong>1　次の一次関数の式を求めなさい。</strong><br><br>
+            (1) グラフが点 $(2, -1)$ を通り、傾き3<br>
+            $y = 3x + b \\rightarrow -1 = 6 + b \\rightarrow b = -7$<br>
+            <span class="ans">$y = 3x - 7$</span><br><br>
+            (2) 変化の割合が $-5$ (傾き $-5$) で、$x=2$ のとき $y=3$<br>
+            $y = -5x + b \\rightarrow 3 = -10 + b \\rightarrow b = 13$<br>
+            <span class="ans">$y = -5x + 13$</span><br><br>
+            (3) $x=-3$ のとき $y=2$、$x$ の増加量3のとき $y$ の増加量5<br>
+            傾き $a = \\dfrac{5}{3}$。<br>
+            $y = \\dfrac{5}{3}x + b \\rightarrow 2 = -5 + b \\rightarrow b = 7$<br>
+            <span class="ans">$y = \\dfrac{5}{3}x + 7$</span><br><br>
+            (4) 点 $(0, 5)$ を通り（切片5）、$y = \\dfrac{2}{3}x$ に平行（傾き $\\dfrac{2}{3}$）<br>
+            <span class="ans">$y = \\dfrac{2}{3}x + 5$</span><br><br>
+            (5) 点 $(0, -2)$（切片 $-2$）と $(4, 1)$ を通る<br>
+            $1 = 4a - 2 \\rightarrow 4a = 3 \\rightarrow a = \\dfrac{3}{4}$<br>
+            <span class="ans">$y = \\dfrac{3}{4}x - 2$</span><br><br>
+            (6) $x = -2$ のとき $y = 2$、$x = 2$ のとき $y = 8$<br>
+            2点 $(-2, 2), (2, 8)$ を通る。傾き $\\dfrac{8-2}{2-(-2)} = \\dfrac{6}{4} = \\dfrac{3}{2}$<br>
+            $8 = \\dfrac{3}{2} \\times 2 + b \\rightarrow 8 = 3 + b \\rightarrow b = 5$<br>
+            <span class="ans">$y = \\dfrac{3}{2}x + 5$</span>
+        </div>
+    `
+};
+
+guideData["79"] = {
+    title: "p.79 2節 一次関数と方程式 — 点はどのように並んでいるかな？",
+    content: `
+        <h2>2節 一次関数と方程式</h2>
+        <div class="explanation-block">
+            <strong>点はどのように並んでいるかな？</strong><br>
+            二元一次方程式 $2x + y = 5 \\dots①$<br><br>
+            (1) 次の $x$ と $y$ の値の組が、方程式①の解となるように、□に値を書き入れましょう。<br>
+            <span class="ans"> $(-1, 7), (0, 5), (0.5, 4)$</span><br>
+            <span class="ans"> $(1, 3), (2.5, 0), (3, -1)$</span><br><br>
+            
+            (2) (1) の組を座標とする点をかき入れるとどうなるか。<br>
+            <strong>話しあおう：</strong> かいた図からどんなことがわかるでしょうか。<br>
+            <span class="ans">点は一直線上に並んでいる。</span><br>
+            （つまり、二元一次方程式の解の組 $(x, y)$ を座標平面上にとると、一次関数のグラフと同じように直線になることが予想できます）
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a07901" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["80"] = {
+    title: "p.80 1 方程式とグラフ・問1",
+    content: `
+        <h2>1　方程式とグラフ</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> 二元一次方程式 $2x + y = 5$<br>
+            この方程式を $y$ について解くと、<br>
+            $y = -2x + 5$<br>
+            となり、一次関数の式になります。<br>
+            この方程式の解を座標とする点の全体は、直線になります。<br>
+            この直線を「方程式 $2x + y = 5$ のグラフ」といいます。
+        </div>
+        <div class="graph-container">
+            <div id="graph-80" class="jxgbox"></div>
+            <div class="graph-caption">$2x + y = 5$ → $y = -2x + 5$ のグラフ</div>
+        </div>
+        <h2>問1　方程式をyについて解いてグラフを書く</h2>
+        <div class="explanation-block">
+            (1) $x - 2y = 6$<br>
+            $-2y = -x + 6 \\rightarrow$ <span class="ans">$y = \\dfrac{1}{2}x - 3$</span><br>
+            （切片 $-3$、右に2進んで上へ1進む直線）<br><br>
+            (2) $4x + 3y = 0$<br>
+            $3y = -4x \\rightarrow$ <span class="ans">$y = -\\dfrac{4}{3}x$</span><br>
+            （原点を通り、右に3進んで下へ4進む直線）
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-80', {
+            boundingbox: [-2, 7, 5, -3], width: 280, height: 280
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, -2, 5, { color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 0, 5, { name: '(0,5)', color: '#e74c3c' });
+        GraphHelper.drawPoint(b, 2.5, 0, { name: '(2.5,0)', color: '#e74c3c' });
+    }
+};
+
+guideData["81"] = {
+    title: "p.81 例1・問2 — 2点を求めてグラフをかく",
+    content: `
+        <h2>例1　2点を求めてグラフをかく</h2>
+        <div class="explanation-block">
+            方程式 $2x - 3y = 12$ について、グラフ上にある簡単な（整数の）2点を求めます。<br>
+            ・$x = 0$ のとき、$-3y = 12 \\rightarrow y = -4$ （点 $(0, -4)$）<br>
+            ・$y = 0$ のとき、$2x = 12 \\rightarrow x = 6$ （点 $(6, 0)$）<br>
+            この2点を結ぶ直線がグラフになります。
+        </div>
+        <h2>問2　グラフをかきなさい</h2>
+        <div class="explanation-block">
+            (1) $x - y = 5$<br>
+            <span class="ans">$y$ について解くと $y = x - 5$。点 $(0, -5)$ と $(5, 0)$ を通る直線。</span><br><br>
+            (2) $x + 2y = -2$<br>
+            <span class="ans">$y$ について解くと $y = -\\dfrac{1}{2}x - 1$。点 $(0, -1)$ と $(-2, 0)$ を通る直線。</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-81" class="jxgbox"></div>
+            <div class="graph-caption">赤：$x-y=5$（$y=x-5$）　青：$x+2y=-2$（$y=-\\frac{1}{2}x-1$）</div>
+        </div>
+        <h2>説明しよう</h2>
+        <div class="explanation-block">
+            $x - 3y = 7$ で、$x=0$ や $y=0$ では分数になってしまいます。<br>
+            <span class="ans">$x$ について解き、$x = 3y + 7$ とすると、$y$ に簡単な整数（$y=0, -1, -2$ など）を代入することで、$x$ が整数になる点を簡単に見つけることができます。<br>
+            例：$y = -1$ のとき $x = 4$ $(4, -1)$、$y = -2$ のとき $x = 1$ $(1, -2)$</span>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-81', {
+            boundingbox: [-6, 6, 6, -6], width: 280, height: 280
+        });
+        if (!b) return;
+        // (1) x - y = 5 → y = x - 5
+        GraphHelper.drawLine(b, 1, -5, { color: '#e74c3c', label: '(1)', labelX: 3 });
+        // (2) x + 2y = -2 → y = -1/2 x - 1
+        GraphHelper.drawLine(b, -0.5, -1, { color: '#3498db', label: '(2)', labelX: -4 });
+    }
+};
+
+guideData["82"] = {
+    title: "p.82 y=k, x=h のグラフ・問3",
+    content: `
+        <h2>y=k のグラフ</h2>
+        <div class="explanation-block">
+            $y = 3$ のグラフは、$x$ の値がどんな値をとっても、$y$ 座標がつねに 3 になる点の集まりです。<br>
+            したがって、<strong>点 $(0, 3)$ を通り、$x$軸に平行な直線</strong> になります。
+        </div>
+        <h2>問3　グラフをかきなさい</h2>
+        <div class="explanation-block">
+            (1) $y = 2$<br>
+            <span class="ans">点 $(0, 2)$ を通り、$x$軸に平行な直線。</span><br><br>
+            (2) $2y = -6 \\rightarrow y = -3$<br>
+            <span class="ans">点 $(0, -3)$ を通り、$x$軸に平行な直線。</span>
+        </div>
+        <h2>ひろげよう：x=h のグラフ</h2>
+        <div class="explanation-block">
+            方程式 $x = 2$ のグラフは、どんなグラフになるでしょうか。<br>
+            <span class="ans">$y$ の値がどんな値をとっても、$x$ 座標はつねに 2 なので、点 $(2, 0)$ を通り、$y$軸に平行な直線になります。</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-82" class="jxgbox"></div>
+            <div class="graph-caption">赤（横）：$y=3$　青（縦）：$x=2$</div>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-82', {
+            boundingbox: [-4, 5, 5, -4], width: 280, height: 280
+        });
+        if (!b) return;
+        // y = 3 （水平線）
+        b.create('functiongraph', [function(x){ return 3; }], {
+            strokeColor: '#e74c3c', strokeWidth: 2.5, fixed: true, highlight: false
+        });
+        b.create('text', [3.5, 3.5, 'y=3'], { fontSize: 13, color: '#e74c3c', fixed: true, highlight: false });
+        // x = 2 （垂直線）
+        b.create('line', [[2, 0], [2, 1]], {
+            straightFirst: true, straightLast: true,
+            strokeColor: '#3498db', strokeWidth: 2.5, fixed: true, highlight: false,
+            point1: { visible: false }, point2: { visible: false }
+        });
+        b.create('text', [2.4, -2.5, 'x=2'], { fontSize: 13, color: '#3498db', fixed: true, highlight: false });
+    }
+};
+
+guideData["83"] = {
+    title: "p.83 x=h のグラフ・問4・問5・練習問題",
+    content: `
+        <h2>問4　グラフをかきなさい</h2>
+        <div class="explanation-block">
+            (1) $x = -2$ <span class="ans">→ 点 $(-2, 0)$ を通り、$y$軸に平行な直線。</span><br>
+            (2) $3x = 12 \\rightarrow x = 4$ <span class="ans">→ 点 $(4, 0)$ を通り、$y$軸に平行な直線。</span>
+        </div>
+        <h2>問5　x=0, y=0 はどんな直線？</h2>
+        <div class="explanation-block">
+            ・$x = 0$ は <span class="ans">$y$軸</span><br>
+            ・$y = 0$ は <span class="ans">$x$軸</span> を表しています。
+        </div>
+        <h2>練習問題</h2>
+        <div class="explanation-block">
+            <strong>1　次の方程式のグラフをかきなさい。</strong><br>
+            (1) $3x - 4y = 12 \\rightarrow -4y = -3x + 12 \\rightarrow$ <span class="ans">$y = \\dfrac{3}{4}x - 3$</span><br>
+            (2) $4x + y - 2 = 0 \\rightarrow$ <span class="ans">$y = -4x + 2$</span><br>
+            (3) $3x = 2y \\rightarrow$ <span class="ans">$y = \\dfrac{3}{2}x$</span><br>
+            (4) $4y - 16 = 0 \\rightarrow y = 4$ <span class="ans">（$(0, 4)$を通る水平な直線）</span><br>
+            (5) $6 + 2x = 0 \\rightarrow x = -3$ <span class="ans">（$(-3, 0)$を通る垂直な直線）</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a08377" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `
+};
+
+guideData["84"] = {
+    title: "p.84 2 連立方程式とグラフ",
+    content: `
+        <h2>2　連立方程式とグラフ</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong><br>
+            2つの方程式 $x + y = 7$ と $2x + y = 10$ をそれぞれグラフにすると、2本の直線 $l, m$ になります。<br><br>
+            この2直線の交点 P $(3, 4)$ は、どちらの直線上にもあるので、2つの式を両方とも成り立たせます。<br>
+            つまり、交点の座標は、<strong>連立方程式の解</strong> と一致します。<br><br>
+            <div class="tip">
+                連立方程式の解は、2つの方程式のグラフ（2直線）の <strong>交点の座標</strong> になります。
+            </div>
+        </div>
+        <div class="graph-container">
+            <div id="graph-84" class="jxgbox"></div>
+            <div class="graph-caption">$l: x+y=7$　$m: 2x+y=10$　交点 P$(3, 4)$</div>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-84', {
+            boundingbox: [-1, 11, 8, -1], width: 300, height: 300
+        });
+        if (!b) return;
+        // l: x + y = 7 → y = -x + 7
+        GraphHelper.drawLine(b, -1, 7, { color: '#3498db', label: 'ℓ', labelX: 1 });
+        // m: 2x + y = 10 → y = -2x + 10
+        GraphHelper.drawLine(b, -2, 10, { color: '#e74c3c', label: 'm', labelX: 1 });
+        // 交点 P(3, 4)
+        GraphHelper.drawPoint(b, 3, 4, { name: 'P(3, 4)', color: '#333', size: 4 });
+    }
+};
+
+guideData["85"] = {
+    title: "p.85 問1・例題1・問2 — 連立方程式の解と交点",
+    content: `
+        <h2>問1　グラフを使って解く</h2>
+        <div class="explanation-block">
+            $\\begin{cases} x + 2y = 2 \\rightarrow y = -\\dfrac{1}{2}x + 1 \\\\ 2x + y = -2 \\rightarrow y = -2x - 2 \\end{cases}$<br>
+            グラフをかいて交点を読み取ると <span class="ans">$(-2, 2)$</span> になります。<br>
+            （計算で解いても $x = -2, y = 2$ となり、一致します）
+        </div>
+        <h2>例題1　2直線の交点の座標の求め方</h2>
+        <div class="explanation-block">
+            直線 $l: y = -2x + 3$<br>
+            直線 $m: y = x + 1$<br>
+            交点を求めるには、この2式を連立方程式として解きます。<br>
+            $-2x + 3 = x + 1 \\rightarrow 3x = 2 \\rightarrow x = \\dfrac{2}{3}$<br>
+            $y = \\dfrac{2}{3} + 1 = \\dfrac{5}{3}$。<br>
+            <span class="ans">交点 P $\\left(\\dfrac{2}{3}, \\dfrac{5}{3}\\right)$</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-85" class="jxgbox"></div>
+            <div class="graph-caption">$l: y=-2x+3$　$m: y=x+1$　交点 P</div>
+        </div>
+        <h2>問2　交点の座標を求める</h2>
+        <div class="explanation-block">
+            グラフより、2直線の式を読み取ります。<br>
+            直線 $l$ は点 $(0, 4), (1, 1)$ などを通る $\\rightarrow y = -3x + 4$<br>
+            直線 $m$ は点 $(-4, 0), (0, -1)$ を通る $\\rightarrow y = -\\dfrac{1}{4}x - 1$<br>
+            連立して解くと、$-3x + 4 = -\\dfrac{1}{4}x - 1$<br>
+            両辺を4倍：$-12x + 16 = -x - 4 \\rightarrow 11x = 20 \\rightarrow x = \\dfrac{20}{11}$<br>
+            $y = -3 \\times \\dfrac{20}{11} + 4 = \\dfrac{-60 + 44}{11} = -\\dfrac{16}{11}$<br>
+            <span class="ans">よって交点 P は $\\left(\\dfrac{20}{11}, -\\dfrac{16}{11}\\right)$</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-85b" class="jxgbox"></div>
+            <div class="graph-caption">$l: y=-3x+4$　$m: y=-\\frac{1}{4}x-1$　交点 P</div>
+        </div>
+    
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a08577" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        // 例題1のグラフ
+        var b = GraphHelper.createBoard('graph-85', {
+            boundingbox: [-3, 5, 4, -3], width: 280, height: 280
+        });
+        if (!b) return;
+        GraphHelper.drawLine(b, -2, 3, { color: '#3498db', label: 'ℓ', labelX: -1 });
+        GraphHelper.drawLine(b, 1, 1, { color: '#e74c3c', label: 'm', labelX: 2 });
+        GraphHelper.drawPoint(b, 2/3, 5/3, { name: 'P', color: '#333', size: 4 });
+        // 問2のグラフ
+        var b2 = GraphHelper.createBoard('graph-85b', {
+            boundingbox: [-5, 5, 5, -5], width: 280, height: 280
+        });
+        if (!b2) return;
+        GraphHelper.drawLine(b2, -3, 4, { color: '#3498db', label: 'ℓ', labelX: 0.5 });
+        GraphHelper.drawLine(b2, -0.25, -1, { color: '#e74c3c', label: 'm', labelX: -4 });
+        GraphHelper.drawPoint(b2, 20/11, -16/11, { name: 'P', color: '#333', size: 4 });
+    }
+};
+
+guideData["86"] = {
+    title: "p.86 3節 一次関数の利用 — 導入",
+    content: `
+        <h2>3節 一次関数の利用</h2>
+        <div class="explanation-block">
+            <strong>2人が出会う地点はどこかな？</strong><br>
+            けいたさんが、家から5km離れたオリバーさんの家に向かいます。<br>
+            途中の図書館で本を借りてから向かいます。<br><br>
+            グラフの折れ線は：<br>
+            ・$0 \\sim 30$分：3km進む（図書館へ）<br>
+            ・$30 \\sim 60$分：距離が変わらない（図書館に滞在）<br>
+            ・$60 \\sim 90$分：さらに2km進んで5km地点に到着（オリバーさんの家へ）
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a08601" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["87"] = {
+    title: "p.87 一次関数の利用・問1",
+    content: `
+        <h2>1　一次関数の利用</h2>
+        <div class="explanation-block">
+            <strong>問1　グラフから読み取る</strong><br><br>
+            (1) A、B、Cはどれを表していますか？<br>
+            <span class="ans">A地点：けいたさんの家（0km）<br>
+            B地点：図書館（3km）<br>
+            C地点：オリバーさんの家（5km）</span><br><br>
+            (2) 図書館に着く前とあとでは、進む速さはどちらが速いですか。<br>
+            着く前：30分で3km（分速0.1km）<br>
+            出たあと：30分で2km（分速0.067km）<br>
+            <span class="ans">図書館に着く前の方が速い。</span><br><br>
+            (3) 15分後、オリバーさんの家までの道のりは何kmですか。<br>
+            15分後は1.5km地点にいます（グラフの $x=15$ のときの $y$ の値）。<br>
+            目的地の5kmまでは、$5 - 1.5 = 3.5$<br>
+            <span class="ans">3.5km</span><br><br>
+            (4) B地点を出発してから30分後、オリバーさんの家までの道のりは何kmですか。<br>
+            B地点（図書館）を出発するのはグラフの60分時点。その30分後なので $x=90$。<br>
+            $y=5$ で、すでにオリバーさんの家に着いています。<br>
+            <span class="ans">道のりは 0km</span>
+        </div>
+    `
+};
+
+guideData["88"] = {
+    title: "p.88 一次関数の利用・問2・問3",
+    content: `
+        <h2>問2　オリバーさんの移動とグラフ</h2>
+        <div class="explanation-block">
+            オリバーさんは午前10時（図の $x=60$ 分）に出発し、5分で1km（時速12km）進みます。<br>
+            グラフは点 $(60, 5)$ から始まり、15分で3km進む直線を引きます（点 $(75, 2)$ など）。<br><br>
+            (2) 式は傾きが $-\\dfrac{1}{5}$ だから $y = -\\dfrac{1}{5}x + b$。<br>
+            $(60, 5)$ を代入して $5 = -12 + b \\rightarrow b = 17$<br>
+            <span class="ans">式：$y = -\\dfrac{1}{5}x + 17$</span><br><br>
+            (3) けいたさんは60分以降、点 $(60, 3)$ と $(90, 5)$ を結ぶ直線上にいます。<br>
+            傾きは $\\dfrac{2}{30} = \\dfrac{1}{15}$。式は $y = \\dfrac{1}{15}x - 1$。<br>
+            交点を求めると： $-\\dfrac{1}{5}x + 17 = \\dfrac{1}{15}x - 1 \\rightarrow 18 = \\dfrac{4}{15}x \\rightarrow x = 67.5$<br>
+            $67.5$分 は 67分30秒。このとき $y = 3.5$。<br>
+            <span class="ans">出会うのは 午前10時7分30秒、けいたさんの家から 3.5km の地点</span>
+        </div>
+        <h2>説明しよう・問3</h2>
+        <div class="explanation-block">
+            <strong>説明しよう：</strong> 9時30分に出発した場合。<br>
+            $x=30$ で出発（家から1kmを5分で進む速さ）。<br>
+            けいたさんは 30分から60分の間、図書館 ($y=3$) にいます。<br>
+            オリバーさんは $x=40$ のときに $y=3$ になるので、<br>
+            <span class="ans">(イ) 図書館。そこで出会います。</span><br><br>
+            <strong>問3：図書館の前に出会うには？</strong><br>
+            けいたさんが図書館に着く $x=30, y=3$ の時点で、オリバーさんがすでに出発して到着していなければなりません。<br>
+            点 $(30, 3)$ を通るようなオリバーさんの動きを逆算すると、$b = 9$ となり $y = 5$ になるのは $x=20$。<br>
+            <span class="ans">午前9時20分より前に出発しなければならない。</span>
+        </div>
+    `
+};
+
+guideData["89"] = {
+    title: "p.89 変化のようすから予想する問題（ダムの貯水量）",
+    content: `
+        <h2>ダムの貯水量を予想しよう</h2>
+        <div class="explanation-block">
+            <strong>問題：</strong> ダムの貯水量が減ってきており、650万 $m^3$ になるのが何月何日になるかを予想します。<br><br>
+            表を見て、減少量を確認します。<br>
+            ・7/31 → 8/1: $-27$<br>
+            ・8/1 → 8/2: $-22$<br>
+            ・8/2 → 8/3: $-26$<br>
+            ・8/3 → 8/4: $-27$<br>
+            ・8/4 → 8/5: $-19$<br><br>
+            1日あたりの減少量はおよそ定数とみなすことができるため、<strong>一次関数</strong> として見通しを立てて推測することができます。
+        </div>
+    `
+};
+
+guideData["90"] = {
+    title: "p.90 ダムの貯水量・説明しよう（水温）",
+    content: `
+        <h2>ステップ2：一次関数で解決</h2>
+        <div class="explanation-block">
+            1. 2点 $(0, 975)$、$ (3, 900)$ を通る直線とする。<br>
+            傾き $a = \\dfrac{900 - 975}{3 - 0} = -25$<br>
+            <span class="ans">式：$y = -25x + 975$</span><br><br>
+            
+            2. 貯水量が 650万 $m^3$ になるのは：<br>
+            $650 = -25x + 975 \\rightarrow 25x = 325 \\rightarrow x = 13$<br>
+            7月31日から13日後なので、<br>
+            <span class="ans">推測：8月13日</span>
+        </div>
+        <h2>説明しよう：水温の変化</h2>
+        <div class="explanation-block">
+            水温の変化を一次関数とみなして推測します。<br>
+            $(0, 20.0)$ から $(1, 25.8)$, $(2, 32.8)\\dots$ と変化しています。<br>
+            例えば点 $(0, 20.0)$ と点 $(5, 52.2)$ を通る直線とみなすと：<br>
+            傾き $a = \\dfrac{52.2 - 20.0}{5} = 6.44$<br>
+            $y = 6.44x + 20$<br>
+            $y=72$ になるのは、$72 = 6.44x + 20 \\rightarrow 52 = 6.44x \\rightarrow x \\approx 8.07$<br>
+            <span class="ans">およそ 8分後 になると推測できます。</span><br>
+            （抽出する点によって多少計算結果は変わりますが、約8分と見積もれます）
+        </div>
+    `
+};
+
+guideData["91"] = {
+    title: "p.91 動く点と面積の変化",
+    content: `
+        <h2>動く点と面積の変化</h2>
+        <div class="explanation-block">
+            <strong>ひろげよう：</strong> 長方形 ABCD（底辺4, 高さ3）の周上を、Pが毎秒1cmでAからDまで動く。<br>
+            $\\triangle\text{APD}$ の面積 $y$ を $x$ の式で表します。<br><br>
+            <strong>問4</strong> （ア）点PがAB上を動くとき（$0 \\leqq x \\leqq 3$）<br>
+            高さが1秒に1ずつ増えるので、$y = \\dfrac{1}{2} \\times 4 \\times x$<br>
+            <span class="ans">式：$y = 2x$、変域：$0 \\leqq x \\leqq 3$</span><br><br>
+            
+            <strong>問5</strong> （イ）点PがBC上（$3 \\leqq x \\leqq 7$）、（ウ）点PがCD上（$7 \\leqq x \\leqq 10$）<br>
+            （イ）底辺4、高さは常に3（ABの長さ）。$y = \\dfrac{1}{2} \\times 4 \\times 3$<br>
+            <span class="ans">式：$y = 6$、変域：$3 \\leqq x \\leqq 7$</span><br>
+            （ウ）底辺4、高さはPD $=(10 - x)$（残りの距離）。$y = \\dfrac{1}{2} \\times 4 \\times (10 - x)$<br>
+            <span class="ans">式：$y = -2x + 20$、変域：$7 \\leqq x \\leqq 10$</span><br><br>
+
+            <strong>問6</strong> $\\triangle\text{APD}$ の面積が 4 $cm^2$ になるのは？<br>
+            ・AB上のとき：$4 = 2x \\rightarrow x = 2$<br>
+            ・CD上のとき：$4 = -2x + 20 \\rightarrow 2x = 16 \\rightarrow x = 8$<br>
+            <span class="ans">2秒後 と 8秒後</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a09101" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `
+};
+
+guideData["92"] = {
+    title: "p.92 3章 章末問題「学びをたしかめよう」①",
+    content: `
+        <h2>1 一次関数であるものを選ぶ</h2>
+        <div class="explanation-block">
+            (ア) 残り $y=500-x$（一次関数）<br>
+            (イ) 長方形 $xy=30 \\rightarrow y=\\dfrac{30}{x}$（反比例）<br>
+            (ウ) 周の長さ $y=3x$（一次関数）<br>
+            <span class="ans">答え：(ア), (ウ)</span>
+        </div>
+        <h2>2 増加量を求める</h2>
+        <div class="explanation-block">
+            一次関数 $y = 3x + 5$（傾き3）<br>
+            (1) $x$の増加量が2 $\\rightarrow$ <span class="ans">$2 \\times 3 = 6$</span><br>
+            (2) $x$の増加量が5 $\\rightarrow$ <span class="ans">$5 \\times 3 = 15$</span>
+        </div>
+        <h2>3 グラフをかく</h2>
+        <div class="explanation-block">
+            (1) $\\boldsymbol{y = x - 5}$ $\\leftarrow$ <span class="ans">切片 $-5$、傾き $1$ の直線</span><br>
+            (2) $\\boldsymbol{y = -3x + 4}$ $\\leftarrow$ <span class="ans">切片 $4$、傾き $-3$ の直線</span><br>
+            (3) $\\boldsymbol{y = \\dfrac{1}{2}x + 1}$ $\\leftarrow$ <span class="ans">切片 $1$、傾き $\\dfrac{1}{2}$（右に2、上に1）の直線</span>
+        </div>
+        <h2>4 変域を求める</h2>
+        <div class="explanation-block">
+            $y = -\\dfrac{2}{3}x + 3$ について、$-6 \\leqq x \\leqq 3$<br>
+            $x = -6$ のとき $y = -\\dfrac{2}{3}(-6) + 3 = 4 + 3 = 7$<br>
+            $x = 3$ のとき $y = -\\dfrac{2}{3}(3) + 3 = -2 + 3 = 1$<br>
+            <span class="ans">答え：$1 \\leqq y \\leqq 7$</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-92" class="jxgbox"></div>
+            <div class="graph-caption">(1) $y=x-5$　(2) $y=-3x+4$　(3) $y=\\frac{1}{2}x+1$</div>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createBoard('graph-92', {
+            boundingbox: [-6, 6, 6, -6], width: 300, height: 300
+        });
+        if (!b) return;
+        // (1) y = x - 5
+        GraphHelper.drawLine(b, 1, -5, { color: '#e74c3c', label: '(1)', labelX: 4 });
+        // (2) y = -3x + 4
+        GraphHelper.drawLine(b, -3, 4, { color: '#3498db', label: '(2)', labelX: -1 });
+        // (3) y = 1/2 x + 1
+        GraphHelper.drawLine(b, 0.5, 1, { color: '#2ecc71', label: '(3)', labelX: 3 });
+    }
+};
+
+guideData["93"] = {
+    title: "p.93 3章 章末問題「学びをたしかめよう」②",
+    content: `
+        <h2>5 一次関数の式を求める</h2>
+        <div class="explanation-block">
+            (1) 傾き5、切片7<br>
+            <span class="ans">$y = 5x + 7$</span><br><br>
+            (2) 傾き $-1$ で、点 $(2, 3)$ を通る<br>
+            $y = -x + b \\rightarrow 3 = -2 + b \\rightarrow b = 5$<br>
+            <span class="ans">$y = -x + 5$</span><br><br>
+            (3) 2点 $(-2, -4), (1, 5)$ を通る<br>
+            傾き $a = \\dfrac{5 - (-4)}{1 - (-2)} = \\dfrac{9}{3} = 3$<br>
+            $5 = 3 \\times 1 + b \\rightarrow b = 2$<br>
+            <span class="ans">$y = 3x + 2$</span>
+        </div>
+        <h2>6 方程式のグラフ</h2>
+        <div class="explanation-block">
+            (1) $2x + y = 1 \\rightarrow $ <span class="ans">$y = -2x + 1$ の直線</span><br>
+            (2) $4x - 3y = 9 \\rightarrow -3y = -4x + 9 \\rightarrow $ <span class="ans">$y = \\dfrac{4}{3}x - 3$ の直線</span><br>
+            (3) $y = 6$ <span class="ans">→ 点 $(0, 6)$ を通る、横（$x$軸に平行）の直線</span><br>
+            (4) $x = -5$ <span class="ans">→ 点 $(-5, 0)$ を通る、縦（$y$軸に平行）の直線</span>
+        </div>
+        <h2>7 2直線の交点の座標</h2>
+        <div class="explanation-block">
+            グラフより、2直線の式を読み取ります。<br>
+            直線 $l$：切片4、$(4, 0)$ を通る $\\rightarrow y = -x + 4$<br>
+            直線 $m$：切片 $-2$、$(1, 0)$ を通る $\\rightarrow y = 2x - 2$<br>
+            連立して解く：$-x + 4 = 2x - 2 \\rightarrow 3x = 6 \\rightarrow x = 2$<br>
+            $y = -2 + 4 = 2$<br>
+            <span class="ans">交点 P の座標：$(2, 2)$</span>
+        </div>
+        <div class="graph-container">
+            <div id="graph-93" class="jxgbox"></div>
+            <div class="graph-caption">問6：(1) $2x+y=1$ (2) $4x-3y=9$ (3) $y=6$ (4) $x=-5$</div>
+        </div>
+        <div class="graph-container">
+            <div id="graph-93b" class="jxgbox"></div>
+            <div class="graph-caption">問7：$l: y=-x+4$　$m: y=2x-2$　交点 P$(2, 2)$</div>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a09301" target="_blank" rel="noopener" class="qr-link-btn">📖 考え方・解答</a></div>
+    `,
+    onRender: function() {
+        // 問6のグラフ
+        var b = GraphHelper.createBoard('graph-93', {
+            boundingbox: [-7, 8, 7, -5], width: 300, height: 280
+        });
+        if (!b) return;
+        // (1) 2x+y=1 → y=-2x+1
+        GraphHelper.drawLine(b, -2, 1, { color: '#e74c3c', label: '(1)', labelX: -2 });
+        // (2) 4x-3y=9 → y=4/3x-3
+        GraphHelper.drawLine(b, 4/3, -3, { color: '#3498db', label: '(2)', labelX: 3 });
+        // (3) y=6 → 水平線
+        b.create('functiongraph', [function(x){return 6;}], { strokeColor: '#2ecc71', strokeWidth: 2.5, fixed: true, highlight: false });
+        b.create('text', [4, 6.5, '(3)'], { fontSize: 12, color: '#2ecc71', fixed: true, highlight: false });
+        // (4) x=-5 → 垂直線
+        b.create('line', [[-5,0],[-5,1]], { straightFirst:true, straightLast:true, strokeColor:'#9b59b6', strokeWidth:2.5, fixed:true, highlight:false, point1:{visible:false}, point2:{visible:false} });
+        b.create('text', [-5.5, -3, '(4)'], { fontSize: 12, color: '#9b59b6', fixed: true, highlight: false });
+        // 問7のグラフ
+        var b2 = GraphHelper.createBoard('graph-93b', {
+            boundingbox: [-5, 6, 6, -5], width: 280, height: 280
+        });
+        if (!b2) return;
+        // l: y = -x + 4
+        GraphHelper.drawLine(b2, -1, 4, { color: '#3498db', label: 'ℓ', labelX: -1 });
+        // m: y = 2x - 2
+        GraphHelper.drawLine(b2, 2, -2, { color: '#e74c3c', label: 'm', labelX: 3 });
+        // 交点 P(2, 2)
+        GraphHelper.drawPoint(b2, 2, 2, { name: 'P(2, 2)', color: '#333', size: 4 });
+    }
+};
+
+// 94ページ以降のプレースホルダー
+for (let i = 94; i <= 234; i++) {
     guideData[i.toString()] = {
         title: `p.${i} の学習`,
-        content: `<div class="empty-state">第3章以降のオリジナル解説は現在準備中です。</div>`
+        content: `<div class="empty-state">第4章以降のオリジナル解説は現在準備中です。</div>`
     };
 }

@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
             imgRightEl.style.display = 'none';
             pageInd.textContent = `p.${currentPage}`;
 
+            // 前のページのグラフをクリーンアップ
+            if (window.GraphHelper) GraphHelper.cleanup();
+
             const data = guideData[currentPage.toString()];
             if (data) {
                 explanationDiv.innerHTML = data.content;
@@ -109,7 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (window.MathJax && window.MathJax.typesetPromise) {
-                MathJax.typesetPromise([explanationDiv]).catch(e => console.log(e.message));
+                MathJax.typesetPromise([explanationDiv]).then(() => {
+                    // グラフ描画コールバックの実行
+                    if (data && data.onRender) {
+                        try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
+                    }
+                }).catch(e => console.log(e.message));
+            } else if (data && data.onRender) {
+                setTimeout(() => {
+                    try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
+                }, 200);
             }
         }
     }
