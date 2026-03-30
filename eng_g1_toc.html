@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中1 英語 (サンシャイン) | 目次</title>
+    <meta name="description" content="中学1年 英語（サンシャイン 開隆堂）教科書ビューア 目次">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .toc-header { margin-bottom: 2rem; }
+        .toc-list { display: flex; flex-direction: column; gap: 0.8rem; max-width: 800px; margin: 0 auto; }
+        .toc-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .toc-item:hover { transform: translateX(10px); background: rgba(255, 255, 255, 0.2); border-color: rgba(255,255,255,0.5); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .toc-item h3 { font-size: 1.15rem; margin: 0; }
+        .toc-item .page-num { font-size: 0.9rem; color: var(--text-secondary); background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
+        .back-link { display: inline-flex; align-items: center; margin-bottom: 2rem; color: var(--text-secondary); text-decoration: none; font-size: 1.1rem; transition: color 0.3s ease; }
+        .back-link:hover { color: var(--primary-color); }
+        .toc-section-label { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px; margin: 0.8rem 0 0.4rem 0.5rem; }
+        .grade-selector { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+        .grade-btn { padding: 10px 28px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.65); font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; font-family: var(--font-main); }
+        .grade-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+        .grade-btn.active { background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; border-color: transparent; box-shadow: 0 4px 15px rgba(231,76,60,0.3); }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <a href="index.html" class="back-link">
+            <svg style="width:24px;height:24px;margin-right:5px" viewBox="0 0 24 24"><path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            ホームに戻る
+        </a>
+        <header class="lp-header toc-header">
+            <h1>中1 英語 <span class="badge" style="background:#e74c3c;">サンシャイン</span></h1>
+            <p>閲覧したいセクションを選んでください</p>
+        </header>
+        <div class="grade-selector">
+            <a href="eng_g1_toc.html" class="grade-btn active">中1</a>
+            <a href="eng_g2_toc.html" class="grade-btn">中2</a>
+            <a href="eng_g3_toc.html" class="grade-btn">中3</a>
+        </div>
+        <main class="lp-main">
+            <div class="toc-list">
+                <div class="toc-section-label">入門</div>
+                <a href="eng_viewer.html?grade=1&section=ready&page=1" class="toc-item"><h3>Get Ready</h3><span class="page-num">15 pages</span></a>
+
+                <div class="toc-section-label">前期</div>
+                <a href="eng_viewer.html?grade=1&section=prog1&page=1" class="toc-item"><h3>Program 1</h3><span class="page-num">8 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog2&page=1" class="toc-item"><h3>Program 2</h3><span class="page-num">8 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=proj1&page=1" class="toc-item"><h3>Our Project 1</h3><span class="page-num">8 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog3&page=1" class="toc-item"><h3>Program 3</h3><span class="page-num">6 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog4&page=1" class="toc-item"><h3>Program 4</h3><span class="page-num">10 pages</span></a>
+
+                <div class="toc-section-label">中期</div>
+                <a href="eng_viewer.html?grade=1&section=prog5&page=1" class="toc-item"><h3>Program 5</h3><span class="page-num">10 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog6&page=1" class="toc-item"><h3>Program 6</h3><span class="page-num">10 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog7&page=1" class="toc-item"><h3>Program 7</h3><span class="page-num">12 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=proj2&page=1" class="toc-item"><h3>Our Project 2</h3><span class="page-num">6 pages</span></a>
+
+                <div class="toc-section-label">後期</div>
+                <a href="eng_viewer.html?grade=1&section=prog8&page=1" class="toc-item"><h3>Program 8</h3><span class="page-num">10 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog9&page=1" class="toc-item"><h3>Program 9</h3><span class="page-num">14 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=prog10&page=1" class="toc-item"><h3>Program 10</h3><span class="page-num">12 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=proj3&page=1" class="toc-item"><h3>Our Project 3</h3><span class="page-num">6 pages</span></a>
+
+                <div class="toc-section-label">資料</div>
+                <a href="eng_viewer.html?grade=1&section=toc&page=1" class="toc-item"><h3>📖 目次</h3><span class="page-num">4 pages</span></a>
+                <a href="eng_viewer.html?grade=1&section=appendix&page=1" class="toc-item"><h3>📚 巻末資料</h3><span class="page-num">28 pages</span></a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

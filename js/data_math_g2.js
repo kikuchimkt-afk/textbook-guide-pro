@@ -1238,6 +1238,50 @@ guideData["56"] = {
     `
 };
 
+guideData["57"] = {
+    title: "p.57 章末問題「学びをたしかめよう」② — 問題6〜8",
+    content: `
+        <h2>6　方程式 $x + y = 4x + 3y = 1$ を解きなさい。</h2>
+        <div class="explanation-block">
+            <strong>A＝B＝C 型の方程式として解く</strong><br><br>
+            $\\begin{cases} x + y = 1 & \\cdots① \\\\ 4x + 3y = 1 & \\cdots② \\end{cases}$<br><br>
+            ①×3：$3x + 3y = 3$<br>
+            ②−①×3：$x = -2$<br>
+            ①に代入：$-2 + y = 1$ → $y = 3$<br><br>
+            <span class="ans">$(x, y) = (-2, 3)$</span>
+        </div>
+        <h2>7　りんごとももの問題</h2>
+        <div class="explanation-block">
+            <strong>1個100円のりんごと，1個150円のももを，あわせて10個買うと，代金は1200円になりました。<br>
+            りんごともものそれぞれ何個買いましたか。</strong><br><br>
+            <strong>(1) 連立方程式をつくる</strong><br>
+            りんごを $x$ 個，ももを $y$ 個とすると：<br>
+            $\\begin{cases} x + y = 10 & \\cdots① \\\\ 100x + 150y = 1200 & \\cdots② \\end{cases}$<br><br>
+            <strong>(2) 連立方程式を解く</strong><br>
+            ②÷50：$2x + 3y = 24$ ②'<br>
+            ①×2：$2x + 2y = 20$<br>
+            ②'−①×2：$y = 4$，$x = 6$<br><br>
+            確認：$6 + 4 = 10$ ✓，$100 \\times 6 + 150 \\times 4 = 600 + 600 = 1200$ ✓<br><br>
+            <span class="ans">りんご 6個，もも 4個</span>
+        </div>
+        <h2>8　A小学校とB小学校の入学者数</h2>
+        <div class="explanation-block">
+            <strong>ある中学校には，A小学校とB小学校から生徒が入学してきます。<br>
+            昨年の入学者数はあわせて500人でした。<br>
+            今年は，昨年とくらべて，A小学校からの入学者数は80%，B小学校からの入学者数は120%になったので，入学者数はあわせて480人になりました。</strong><br><br>
+            昨年のA小学校を $x$ 人，B小学校を $y$ 人とすると：<br>
+            $\\begin{cases} x + y = 500 & \\cdots① \\\\ 0.8x + 1.2y = 480 & \\cdots② \\end{cases}$<br><br>
+            ②×10：$8x + 12y = 4800$ ②'<br>
+            ①×8：$8x + 8y = 4000$<br>
+            ②'−①×8：$4y = 800$ → $y = 200$，$x = 300$<br><br>
+            確認：$300 + 200 = 500$ ✓<br>
+            今年：$0.8 \\times 300 + 1.2 \\times 200 = 240 + 240 = 480$ ✓<br><br>
+            <span class="ans">昨年：A小学校 300人，B小学校 200人</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a05701" target="_blank" rel="noopener" class="qr-link-btn">📖 学習したこと・解答</a></div>
+    `
+};
+
 guideData["58"] = {
     title: "p.58 章末問題「学びを身につけよう」① — 1〜4",
     content: `
@@ -2448,3 +2492,349 @@ for (let i = 94; i <= 234; i++) {
         content: `<div class="empty-state">第4章以降のオリジナル解説は現在準備中です。</div>`
     };
 }
+
+// ======================== 第4章 ========================
+guideData["96"] = {
+    title: "p.96 第4章 章導入「平行な直線の性質を調べよう」",
+    content: `
+        <h2>第4章 図形の調べ方</h2>
+        <div class="explanation-block">
+            <strong>平行な直線の性質を調べよう</strong><br><br>
+            伸縮式の門扉（じゃばら式のゲート）を見ると、次のことに気づきます。<br><br>
+            ・直線がたくさん交わっている<br>
+            ・交わっているものや<strong>平行</strong>になっているものがある<br>
+            ・角がたくさんあるけど、大きさが<strong>等しい</strong>ものがありそう<br>
+            ・伸ばしたり縮めたりしても、その関係は変わらない<br><br>
+            💡 この章では、平行線の性質や多角形の角、図形の合同について調べていきます。
+        </div>
+    `
+};
+
+guideData["97"] = {
+    title: "p.97 1節 平行と合同 — 導入「話しあおう」",
+    content: `
+        <h2>1節 平行と合同</h2>
+        <div class="explanation-block">
+            直線が交わってできる角の大きさについて考えます。<br><br>
+            <strong>(ア)</strong> 2つの直線 AB，CDが交わってできる角<br>
+            <strong>(イ)</strong> 平行な2直線 EF，GHと、それらに交わる直線 l によってできる角<br><br>
+            <div class="graph-container">
+                <div id="graph-97a" class="jxgbox"></div>
+                <div class="graph-caption">（ア）2直線が交わる角</div>
+            </div>
+            <br>
+            <div class="graph-container">
+                <div id="graph-97b" class="jxgbox"></div>
+                <div class="graph-caption">（イ）平行線と横断線</div>
+            </div>
+        </div>
+        <div class="explanation-block">
+            <strong>話しあおう</strong><br>
+            ・（ア）の図で、2直線が交わってできる角にはどんな関係があるでしょうか？<br>
+            → <span class="ans">向かい合った角（対頂角）は等しい</span><br><br>
+            ・（イ）の図で、平行な2直線と横断線によってできる角にはどんな関係があるでしょうか？<br>
+            → <span class="ans">同位角は等しい、錯角は等しい</span>
+        </div>
+    `,
+    onRender: function() {
+        // (ア) 2直線の交点
+        var b1 = GraphHelper.createGeometryBoard('graph-97a', {
+            boundingbox: [-5, 4, 5, -4], width: 320, height: 200
+        });
+        if (!b1) return;
+        // 直線 AB
+        GraphHelper.drawSegment(b1, [-4, -2], [4, 3], { color: '#333', width: 2 });
+        // 直線 CD
+        GraphHelper.drawSegment(b1, [-3, 3], [4, -2.5], { color: '#333', width: 2 });
+        // ラベル
+        GraphHelper.drawLabel(b1, -4.3, -2.2, 'A', { fontSize: 13 });
+        GraphHelper.drawLabel(b1, 4.3, 3.2, 'B', { fontSize: 13 });
+        GraphHelper.drawLabel(b1, -3.3, 3.2, 'C', { fontSize: 13 });
+        GraphHelper.drawLabel(b1, 4.3, -2.7, 'D', { fontSize: 13 });
+        GraphHelper.drawLabel(b1, 0.6, 1.2, 'P', { fontSize: 12, color: '#e74c3c' });
+
+        // (イ) 平行線 + 横断線
+        var b2 = GraphHelper.createGeometryBoard('graph-97b', {
+            boundingbox: [-5, 5, 7, -5], width: 340, height: 240
+        });
+        if (!b2) return;
+        // 直線 EF（平行線上）
+        GraphHelper.drawSegment(b2, [-3, 2], [6, 2], { color: '#e67e22', width: 2, arrow: true });
+        // 直線 GH（平行線下）
+        GraphHelper.drawSegment(b2, [-3, -2], [6, -2], { color: '#e67e22', width: 2, arrow: true });
+        // 横断線 l
+        GraphHelper.drawSegment(b2, [0, 4.5], [4, -4.5], { color: '#333', width: 2 });
+        // 平行マーク
+        GraphHelper.drawParallelMark(b2, [-3, 2], [6, 2], { count: 1, color: '#e67e22', size: 0.4 });
+        GraphHelper.drawParallelMark(b2, [-3, -2], [6, -2], { count: 1, color: '#e67e22', size: 0.4 });
+        // ラベル
+        GraphHelper.drawLabel(b2, -3.5, 2, 'E', { fontSize: 13 });
+        GraphHelper.drawLabel(b2, 6.3, 2, 'F', { fontSize: 13 });
+        GraphHelper.drawLabel(b2, -3.5, -2, 'G', { fontSize: 13 });
+        GraphHelper.drawLabel(b2, 6.3, -2, 'H', { fontSize: 13 });
+        GraphHelper.drawLabel(b2, 1.3, 2.5, 'Q', { fontSize: 12, color: '#e74c3c' });
+        GraphHelper.drawLabel(b2, 2.7, -2.5, 'R', { fontSize: 12, color: '#e74c3c' });
+        GraphHelper.drawLabel(b2, -0.3, 4.5, 'l', { fontSize: 14, italic: true });
+    }
+};
+
+guideData["98"] = {
+    title: "p.98 ①角と平行線 — 対頂角・ひろげよう・問1",
+    content: `
+        <h2>① 角と平行線</h2>
+        <div class="explanation-block">
+            <strong>▶ 対頂角</strong><br><br>
+            2つの直線が交わってできる4つの角のうち、<br>
+            $\\angle a$ と $\\angle c$ のように向かいあっている2つの角を<strong>対頂角</strong>といいます。<br><br>
+            $\\angle b$ と $\\angle d$ も対頂角です。
+            <div class="graph-container">
+                <div id="graph-98a" class="jxgbox"></div>
+                <div class="graph-caption">対頂角の関係：∠a = ∠c、∠b = ∠d</div>
+            </div>
+        </div>
+        <div class="explanation-block" style="background: rgba(231,76,60,0.05); border-left-color: #e74c3c;">
+            <strong>🔑 対頂角の性質</strong><br><br>
+            <span class="ans" style="font-size:1.1em">対頂角は等しい。</span><br><br>
+            <strong>理由：</strong><br>
+            $\\angle b = 70°$ のとき、一直線の角は $180°$ だから、<br>
+            $\\angle a = 180° - 70° = 110°$<br>
+            $\\angle c = 180° - 70° = 110°$<br>
+            よって $\\angle a = \\angle c$<br><br>
+            $\\angle b$ がどんな角度でも、$\\angle a = 180° - \\angle b$，$\\angle c = 180° - \\angle b$ なので $\\angle a = \\angle c$ が成り立つ。
+        </div>
+        <h2>問1 の解説</h2>
+        <div class="explanation-block">
+            <strong>問1　3直線が1点で交わっているとき、∠a，∠b，∠c，∠d を求めなさい。</strong><br><br>
+            <div class="graph-container">
+                <div id="graph-98b" class="jxgbox"></div>
+                <div class="graph-caption">3直線が1点で交わる図</div>
+            </div>
+            図では $40°$ と $80°$ が与えられている。<br><br>
+            一直線の角は $180°$ で、$40° + 80° + \\angle d = 180°$ より<br>
+            <span class="ans">$\\angle d = 60°$</span><br><br>
+            対頂角の性質から：<br>
+            <span class="ans">$\\angle a = 40°$（$40°$ の対頂角）<br>
+            $\\angle b = 80°$（$80°$ の対頂角）<br>
+            $\\angle c = 60°$（$\\angle d$ の対頂角）</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a09877" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        // 対頂角の図
+        var b1 = GraphHelper.createGeometryBoard('graph-98a', {
+            boundingbox: [-4, 3.5, 4, -3.5], width: 300, height: 220
+        });
+        if (!b1) return;
+        // 直線 l
+        GraphHelper.drawSegment(b1, [-3.5, 2.5], [3.5, -2.5], { color: '#333', width: 2 });
+        // 直線 m
+        GraphHelper.drawSegment(b1, [-3.5, -1.5], [3.5, 1.5], { color: '#333', width: 2 });
+        // 角度ラベル
+        GraphHelper.drawLabel(b1, 0.8, 0.8, 'a', { color: '#e74c3c', italic: true, fontSize: 15 });
+        GraphHelper.drawLabel(b1, 0.5, -0.1, 'b', { color: '#3498db', italic: true, fontSize: 13 });
+        GraphHelper.drawLabel(b1, -0.8, -0.8, 'c', { color: '#e74c3c', italic: true, fontSize: 15 });
+        GraphHelper.drawLabel(b1, -0.5, 0.2, 'd', { color: '#3498db', italic: true, fontSize: 13 });
+        GraphHelper.drawLabel(b1, -3.8, 2.7, 'ℓ', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b1, -3.8, -1.7, 'm', { fontSize: 14, italic: true });
+
+        // 問1の図
+        var b2 = GraphHelper.createGeometryBoard('graph-98b', {
+            boundingbox: [-4, 3.5, 4, -3.5], width: 300, height: 220
+        });
+        if (!b2) return;
+        // 3直線
+        GraphHelper.drawSegment(b2, [-3.5, 0], [3.5, 0], { color: '#333', width: 2 });
+        GraphHelper.drawSegment(b2, [-1.5, 3], [1.5, -3], { color: '#333', width: 2 });
+        GraphHelper.drawSegment(b2, [-2.5, -2.8], [2.5, 2.8], { color: '#333', width: 2 });
+        // ラベル
+        GraphHelper.drawLabel(b2, 1.5, 0.7, 'a', { color: '#e74c3c', italic: true });
+        GraphHelper.drawLabel(b2, -0.4, -1.0, 'b', { color: '#e74c3c', italic: true });
+        GraphHelper.drawLabel(b2, 0.6, -0.8, 'c', { color: '#e74c3c', italic: true });
+        GraphHelper.drawLabel(b2, -1.4, 0.7, 'd', { color: '#e74c3c', italic: true });
+        GraphHelper.drawLabel(b2, 2.3, 0.6, '40°', { fontSize: 11, color: '#333' });
+        GraphHelper.drawLabel(b2, -1.5, -0.7, '80°', { fontSize: 11, color: '#333' });
+    }
+};
+
+guideData["99"] = {
+    title: "p.99 同位角・錯角と平行線 — 問2",
+    content: `
+        <h2>▶ 同位角・錯角と平行線</h2>
+        <div class="explanation-block">
+            2直線 $\\ell$，$m$ に直線 $n$ が交わるとき：
+            <div class="graph-container">
+                <div id="graph-99a" class="jxgbox"></div>
+                <div class="graph-caption">同位角と錯角</div>
+            </div>
+            <strong>同位角（どういかく）</strong>：同じ位置にある角の組<br>
+            → $\\angle a$ と $\\angle e$，$\\angle b$ と $\\angle f$，$\\angle c$ と $\\angle g$，$\\angle d$ と $\\angle h$<br><br>
+            <strong>錯角（さっかく）</strong>：互い違いの位置にある角の組<br>
+            → $\\angle c$ と $\\angle e$，$\\angle d$ と $\\angle f$
+        </div>
+        <h2>問2 の解説</h2>
+        <div class="explanation-block">
+            <strong>問2　右の図で、∠a の同位角をいいなさい。また、∠p の錯角をいいなさい。</strong><br><br>
+            <span class="ans">$\\angle a$ の同位角は $\\angle p$</span><br>
+            （2直線に横断線が交わるとき、同じ位置にある角）<br><br>
+            <span class="ans">$\\angle p$ の錯角は $\\angle d$</span><br>
+            （互い違いの位置にある角）
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createGeometryBoard('graph-99a', {
+            boundingbox: [-5, 6, 7, -6], width: 340, height: 300
+        });
+        if (!b) return;
+        // 直線 ℓ（上）
+        GraphHelper.drawSegment(b, [-4, 2], [6, 2], { color: '#333', width: 2 });
+        // 直線 m（下）
+        GraphHelper.drawSegment(b, [-4, -2], [6, -2], { color: '#333', width: 2 });
+        // 横断線 n
+        GraphHelper.drawSegment(b, [0, 5.5], [4, -5.5], { color: '#e67e22', width: 2 });
+        // ℓ上の角ラベル
+        GraphHelper.drawLabel(b, 2.1, 2.8, 'a', { color: '#e74c3c', italic: true, fontSize: 13 });
+        GraphHelper.drawLabel(b, 1.0, 2.7, 'b', { color: '#3498db', italic: true, fontSize: 12 });
+        GraphHelper.drawLabel(b, 1.0, 1.3, 'c', { color: '#2ecc71', italic: true, fontSize: 12 });
+        GraphHelper.drawLabel(b, 2.1, 1.3, 'd', { color: '#9b59b6', italic: true, fontSize: 12 });
+        // m上の角ラベル
+        GraphHelper.drawLabel(b, 3.5, -1.2, 'e', { color: '#e74c3c', italic: true, fontSize: 13 });
+        GraphHelper.drawLabel(b, 2.4, -1.2, 'f', { color: '#3498db', italic: true, fontSize: 12 });
+        GraphHelper.drawLabel(b, 2.4, -2.7, 'g', { color: '#2ecc71', italic: true, fontSize: 12 });
+        GraphHelper.drawLabel(b, 3.5, -2.7, 'h', { color: '#9b59b6', italic: true, fontSize: 12 });
+        // 直線ラベル
+        GraphHelper.drawLabel(b, -4.5, 2, 'ℓ', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b, -4.5, -2, 'm', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b, 0.3, 5.5, 'n', { fontSize: 14, italic: true });
+    }
+};
+
+guideData["100"] = {
+    title: "p.100 平行線の性質 — ひろげよう",
+    content: `
+        <h2>平行線の性質</h2>
+        <div class="explanation-block">
+            <strong>同位角と平行線</strong><br><br>
+            三角定規を使って平行線をひくとき、同位角（$\\angle a$ と $\\angle b$）が等しくなることを利用しています。つまり、<br><br>
+            <span class="ans" style="font-size:1.05em">$\\angle a = \\angle b$ ならば $\\ell \\mathbin{/\\!/} m$</span><br><br>
+            また、$\\ell \\mathbin{/\\!/} m$ のとき、$n$ が $\\ell$，$m$ とどのように交わっても、同位角は等しくなります。つまり、<br><br>
+            <span class="ans" style="font-size:1.05em">$\\ell \\mathbin{/\\!/} m$ ならば $\\angle a = \\angle b$</span>
+        </div>
+        <h2>ひろげよう の解説</h2>
+        <div class="explanation-block">
+            <strong>$\\ell \\mathbin{/\\!/} m$ のとき、$\\angle a$，$\\angle b$，$\\angle c$，$\\angle d$ の大きさはどうなるでしょうか。</strong>
+            <div class="graph-container">
+                <div id="graph-100" class="jxgbox"></div>
+                <div class="graph-caption">ℓ // m のとき、∠a = 60°（同位角）</div>
+            </div>
+            図で $60°$ が与えられているとき：<br><br>
+            $\\angle a$（同位角）= <span class="ans">$60°$</span><br>
+            $\\angle b$（$\\angle a$ の対頂角）= <span class="ans">$60°$</span><br>
+            $\\angle c$（$60°$ と一直線）= <span class="ans">$120°$</span><br>
+            $\\angle d$（$\\angle c$ の同位角）= <span class="ans">$120°$</span><br><br>
+            💡 平行線と横断線で、同位角は等しい → 対頂角も等しい → 錯角も等しい
+        </div>
+        <div class="explanation-block" style="background: rgba(231,76,60,0.05); border-left-color: #e74c3c;">
+            <strong>🔑 錯角の性質の証明</strong><br><br>
+            $\\ell \\mathbin{/\\!/} m$ のとき、<br>
+            同位角：$\\angle a = \\angle b$（平行線の性質）<br>
+            対頂角：$\\angle b = \\angle c$（対頂角の性質）<br>
+            よって $\\angle a = \\angle c$<br><br>
+            <span class="ans" style="font-size:1.05em">$\\ell \\mathbin{/\\!/} m$ ならば $\\angle a = \\angle c$（錯角は等しい）</span>
+        </div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createGeometryBoard('graph-100', {
+            boundingbox: [-5, 5, 7, -5], width: 340, height: 260
+        });
+        if (!b) return;
+        // ℓ（上の平行線）
+        GraphHelper.drawSegment(b, [-4, 2], [6, 2], { color: '#333', width: 2, arrow: true });
+        // m（下の平行線）
+        GraphHelper.drawSegment(b, [-4, -2], [6, -2], { color: '#333', width: 2, arrow: true });
+        // 横断線 n
+        GraphHelper.drawSegment(b, [-1, 4.5], [5, -4.5], { color: '#e67e22', width: 2 });
+        // 平行マーク
+        GraphHelper.drawParallelMark(b, [-4, 2], [6, 2], { count: 1, color: '#e67e22', size: 0.4 });
+        GraphHelper.drawParallelMark(b, [-4, -2], [6, -2], { count: 1, color: '#e67e22', size: 0.4 });
+        // ラベル
+        GraphHelper.drawLabel(b, -4.5, 2.3, 'ℓ', { fontSize: 15, italic: true });
+        GraphHelper.drawLabel(b, -4.5, -1.7, 'm', { fontSize: 15, italic: true });
+        GraphHelper.drawLabel(b, -1, 4.8, 'n', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b, 0.5, 3.0, '60°', { fontSize: 12, color: '#333' });
+        GraphHelper.drawLabel(b, 2.4, -1.2, 'a', { color: '#e74c3c', italic: true, fontSize: 14 });
+        GraphHelper.drawLabel(b, 3.5, -1.2, 'd', { color: '#9b59b6', italic: true, fontSize: 14 });
+        GraphHelper.drawLabel(b, 2.4, -2.8, 'b', { color: '#3498db', italic: true, fontSize: 14 });
+        GraphHelper.drawLabel(b, 3.5, -2.8, 'c', { color: '#2ecc71', italic: true, fontSize: 14 });
+    }
+};
+
+guideData["101"] = {
+    title: "p.101 平行線の性質と条件 — 問3",
+    content: `
+        <h2>平行線の性質と条件のまとめ</h2>
+        <div class="explanation-block" style="background: rgba(52,152,219,0.05); border-left-color: #3498db;">
+            <strong>🔑 平行線の性質</strong><br>
+            2つの直線に1つの直線が交わるとき、次のことが成り立つ。<br><br>
+            ❶ 2つの直線が<strong>平行ならば</strong>、<span class="ans">同位角は等しい。</span><br>
+            ❷ 2つの直線が<strong>平行ならば</strong>、<span class="ans">錯角は等しい。</span>
+        </div>
+        <div class="explanation-block" style="background: rgba(46,204,113,0.05); border-left-color: #2ecc71;">
+            <strong>🔑 平行線になるための条件</strong><br>
+            2つの直線に1つの直線が交わるとき、次のことが成り立つ。<br><br>
+            ❶ <strong>同位角が等しい</strong>ならば、この2つの直線は<span class="ans">平行である。</span><br>
+            ❷ <strong>錯角が等しい</strong>ならば、この2つの直線は<span class="ans">平行である。</span>
+        </div>
+        <h2>問3 の解説</h2>
+        <div class="explanation-block">
+            <strong>問3　右の図について、次の問いに答えなさい。</strong>
+            <div class="graph-container">
+                <div id="graph-101" class="jxgbox"></div>
+                <div class="graph-caption">問3の図</div>
+            </div>
+            <strong>(1) $\\ell \\mathbin{/\\!/} m$ である理由をいいなさい。</strong><br>
+            <span class="ans">直線 $p$ について、$\\ell$ と $m$ の同位角が $100°$ で等しいから、$\\ell \\mathbin{/\\!/} m$</span><br><br>
+            <strong>(2) $\\angle x$，$\\angle y$ の大きさを求めなさい。</strong><br>
+            $\\ell \\mathbin{/\\!/} m$ より：<br>
+            $\\angle x$：直線 $q$ について、$\\ell$ 上の $70°$ の錯角 → <span class="ans">$\\angle x = 70°$</span><br>
+            $\\angle y$：直線 $r$ 上で $80°$ の同位角 → <span class="ans">$\\angle y = 80°$</span><br><br>
+            <strong>(3) $\\ell$ と $m$ のほかに、平行な直線の組を見つけ、記号 // を使って表しなさい。</strong><br>
+            直線 $q$ と直線 $r$ について：<br>
+            $\\ell$ 上で $\\angle x = 70°$，$r$ 上で隣接角 $= 180° - 80° = 100°$<br>
+            → 錯角の関係を確認...<br>
+            <span class="ans">$p \\mathbin{/\\!/} q$（$\\ell$ 上の同位角 $100°$ と $100°$ が等しい）</span>
+        </div>
+        <div class="qr-links"><h3>📖 QRコード リンク</h3><a href="https://k-qr.com/5m2a10177" target="_blank" rel="noopener" class="qr-link-btn">📝 補充問題</a></div>
+    `,
+    onRender: function() {
+        var b = GraphHelper.createGeometryBoard('graph-101', {
+            boundingbox: [-5, 5, 8, -5], width: 380, height: 280
+        });
+        if (!b) return;
+        // ℓ（上の平行線）
+        GraphHelper.drawSegment(b, [-4, 2], [7, 2], { color: '#333', width: 2 });
+        // m（下の平行線）
+        GraphHelper.drawSegment(b, [-4, -2], [7, -2], { color: '#333', width: 2 });
+        // 直線 p
+        GraphHelper.drawSegment(b, [-2, 4.5], [-1, -4.5], { color: '#555', width: 1.5 });
+        // 直線 q
+        GraphHelper.drawSegment(b, [1, 4.5], [2, -4.5], { color: '#555', width: 1.5 });
+        // 直線 r
+        GraphHelper.drawSegment(b, [4, 4.5], [6.5, -4.5], { color: '#555', width: 1.5 });
+        // 平行マーク
+        GraphHelper.drawParallelMark(b, [-4, 2], [7, 2], { count: 1, color: '#e67e22', size: 0.4, position: 0.85 });
+        GraphHelper.drawParallelMark(b, [-4, -2], [7, -2], { count: 1, color: '#e67e22', size: 0.4, position: 0.85 });
+        // 角度ラベル
+        GraphHelper.drawLabel(b, -1.3, 2.6, '100°', { fontSize: 11, color: '#333' });
+        GraphHelper.drawLabel(b, 1.7, 2.7, '70°', { fontSize: 11, color: '#333' });
+        GraphHelper.drawLabel(b, 5.5, 2.7, '80°', { fontSize: 11, color: '#333' });
+        GraphHelper.drawLabel(b, -0.6, -1.3, '100°', { fontSize: 11, color: '#333' });
+        GraphHelper.drawLabel(b, 2.5, -1.3, 'x', { fontSize: 13, color: '#e74c3c', italic: true });
+        GraphHelper.drawLabel(b, 5.8, -1.3, 'y', { fontSize: 13, color: '#e74c3c', italic: true });
+        // 直線ラベル
+        GraphHelper.drawLabel(b, -4.5, 2.3, 'ℓ', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b, -4.5, -1.7, 'm', { fontSize: 14, italic: true });
+        GraphHelper.drawLabel(b, -2.3, 4.5, 'p', { fontSize: 13, italic: true });
+        GraphHelper.drawLabel(b, 0.7, 4.5, 'q', { fontSize: 13, italic: true });
+        GraphHelper.drawLabel(b, 3.7, 4.5, 'r', { fontSize: 13, italic: true });
+    }
+};

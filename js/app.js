@@ -3,43 +3,108 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPage = parseInt(urlParams.get('page')) || 10;
     
     const MIN_PAGE = 1;
-    const MAX_PAGE = 258;
+    const MAX_PAGE = 234;
 
+    // DOM refs
     const imgEl = document.getElementById('textbook-img');
     const imgRightEl = document.getElementById('textbook-img-right');
     const imageWrapper = document.getElementById('image-wrapper');
     const pageInd = document.getElementById('page-indicator');
     const explanationDiv = document.getElementById('explanation-container');
+    const rightPane = document.getElementById('right-pane');
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
-    const btnMode = document.getElementById('btn-mode');
     const btnFullscreen = document.getElementById('btn-fullscreen');
     const fsIcon = document.getElementById('fs-icon');
     const fsLabel = document.getElementById('fs-label');
-    const modeIcon = document.getElementById('mode-icon');
-    const modeLabel = document.getElementById('mode-label');
-    const viewerContainer = document.querySelector('.viewer-container');
+    const viewerContainer = document.getElementById('viewer-container');
     const floatingNav = document.getElementById('floating-nav');
     const floatPrev = document.getElementById('float-prev');
     const floatNext = document.getElementById('float-next');
     const floatPage = document.getElementById('float-page');
     const floatExitFs = document.getElementById('float-exit-fs');
-    
-    let isLectureMode = false;
+    const chapterTitle = document.getElementById('chapter-title');
+
+    // Chapter definitions
+    const chapters = [
+        { num: 1, title: '第1章 式の計算', start: 10, end: 35 },
+        { num: 2, title: '第2章 連立方程式', start: 36, end: 59 },
+        { num: 3, title: '第3章 一次関数', start: 60, end: 93 },
+        { num: 4, title: '第4章 図形の調べ方', start: 94, end: 123 },
+        { num: 5, title: '第5章 図形の性質と証明', start: 124, end: 157 },
+        { num: 6, title: '第6章 場合の数と確率', start: 158, end: 171 },
+        { num: 7, title: '第7章 箱ひげ図とデータの活用', start: 172, end: 192 }
+    ];
+
+    function getChapterForPage(p) {
+        for (const ch of chapters) {
+            if (p >= ch.start && p <= ch.end) return ch;
+        }
+        return null;
+    }
+
+    // View modes: 'viewer', 'guide', 'spread'
+    let viewMode = 'viewer';
     let currentZoom = 1;
+
+    // Mode tabs
+    document.querySelectorAll('.mode-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const newMode = tab.dataset.mode;
+            if (newMode === viewMode) return;
+            setViewMode(newMode);
+        });
+    });
+
+    function setViewMode(mode) {
+        viewMode = mode;
+
+        // Update tab UI
+        document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+        const activeTab = document.querySelector(`.mode-tab[data-mode="${mode}"]`);
+        if (activeTab) activeTab.classList.add('active');
+
+        // Update container classes
+        viewerContainer.classList.remove('guide-mode', 'spread-mode');
+        if (mode === 'guide') viewerContainer.classList.add('guide-mode');
+        if (mode === 'spread') viewerContainer.classList.add('spread-mode');
+
+        // Show/hide panels
+        if (mode === 'viewer') {
+            rightPane.style.display = 'none';
+            btnFullscreen.style.display = 'none';
+            floatingNav.style.display = 'none';
+            if (document.fullscreenElement) document.exitFullscreen();
+        } else if (mode === 'guide') {
+            rightPane.style.display = 'block';
+            btnFullscreen.style.display = 'none';
+            floatingNav.style.display = 'none';
+            if (document.fullscreenElement) document.exitFullscreen();
+        } else if (mode === 'spread') {
+            rightPane.style.display = 'none';
+            btnFullscreen.style.display = 'inline-flex';
+            floatingNav.style.display = 'block';
+        }
+
+        loadPage(currentPage);
+    }
 
     // Zoom
     document.getElementById('btn-zoom-in').addEventListener('click', () => {
-        currentZoom += 0.2;
+        currentZoom = Math.min(3, currentZoom + 0.25);
         applyZoom();
     });
     document.getElementById('btn-zoom-out').addEventListener('click', () => {
-        currentZoom = Math.max(0.5, currentZoom - 0.2);
+        currentZoom = Math.max(0.5, currentZoom - 0.25);
+        applyZoom();
+    });
+    document.getElementById('btn-zoom-reset').addEventListener('click', () => {
+        currentZoom = 1;
         applyZoom();
     });
 
     function applyZoom() {
-        if (isLectureMode) {
+        if (viewMode === 'spread') {
             imageWrapper.style.transform = `scale(${currentZoom})`;
             imgEl.style.transform = 'none';
             imgRightEl.style.transform = 'none';
@@ -60,101 +125,130 @@ document.addEventListener('DOMContentLoaded', () => {
         imageWrapper.classList.add(direction > 0 ? 'page-turn-left' : 'page-turn-right');
     }
 
+    let isNavigating = false;
+
+    function preloadImage(src) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = src;
+        });
+    }
+
     function loadPage(pageNum, direction) {
         if (pageNum < MIN_PAGE) pageNum = MIN_PAGE;
         if (pageNum > MAX_PAGE) pageNum = MAX_PAGE;
-        currentPage = pageNum;
-        
-        const currentChapter = urlParams.get('chapter') || '1';
-        const newUrl = window.location.protocol + "//" + window.location.host + 
-            window.location.pathname + '?chapter=' + currentChapter + '&page=' + currentPage;
-        window.history.pushState({ path: newUrl }, '', newUrl);
 
-        currentZoom = 1;
-        imgEl.style.transform = 'scale(1)';
-        imgRightEl.style.transform = 'scale(1)';
-        imageWrapper.style.transform = 'none';
+        if (isNavigating) return;
 
-        if (direction !== undefined) animatePageTurn(direction);
+        const imagesToPreload = [];
+        let resolvedLeftPage = pageNum;
 
-        if (isLectureMode) {
-            let leftPage = currentPage % 2 === 0 ? currentPage : currentPage - 1;
-            if (leftPage < MIN_PAGE) leftPage = MIN_PAGE;
-            currentPage = leftPage;
-
-            imgEl.src = getImageSrc(leftPage);
-            const rightPage = leftPage + 1;
+        if (viewMode === 'spread') {
+            resolvedLeftPage = pageNum % 2 === 0 ? pageNum : pageNum - 1;
+            if (resolvedLeftPage < MIN_PAGE) resolvedLeftPage = MIN_PAGE;
+            imagesToPreload.push(getImageSrc(resolvedLeftPage));
+            const rightPage = resolvedLeftPage + 1;
             if (rightPage <= MAX_PAGE) {
-                imgRightEl.src = getImageSrc(rightPage);
-                imgRightEl.style.display = 'block';
-            } else {
-                imgRightEl.style.display = 'none';
+                imagesToPreload.push(getImageSrc(rightPage));
             }
-            const label = `p.${leftPage}–${Math.min(rightPage, MAX_PAGE)}`;
-            pageInd.textContent = label;
-            floatPage.textContent = label;
-            document.getElementById('chapter-title').textContent = label;
         } else {
-            imgEl.src = getImageSrc(currentPage);
-            imgRightEl.style.display = 'none';
-            pageInd.textContent = `p.${currentPage}`;
+            imagesToPreload.push(getImageSrc(pageNum));
+        }
 
-            // 前のページのグラフをクリーンアップ
-            if (window.GraphHelper) GraphHelper.cleanup();
+        isNavigating = true;
 
-            const data = guideData[currentPage.toString()];
-            if (data) {
-                explanationDiv.innerHTML = data.content;
-                document.getElementById('chapter-title').textContent = data.title;
+        Promise.all(imagesToPreload.map(preloadImage)).then(() => {
+            currentPage = viewMode === 'spread' ? resolvedLeftPage : pageNum;
+
+            // URL update
+            const currentChapter = urlParams.get('chapter') || '1';
+            const newUrl = window.location.protocol + "//" + window.location.host + 
+                window.location.pathname + '?chapter=' + currentChapter + '&page=' + currentPage;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+
+            // Reset zoom
+            currentZoom = 1;
+            imgEl.style.transform = 'scale(1)';
+            imgRightEl.style.transform = 'scale(1)';
+            imageWrapper.style.transform = 'none';
+
+            if (direction !== undefined) animatePageTurn(direction);
+
+            if (viewMode === 'spread') {
+                imgEl.src = getImageSrc(resolvedLeftPage);
+                const rightPage = resolvedLeftPage + 1;
+                if (rightPage <= MAX_PAGE) {
+                    imgRightEl.src = getImageSrc(rightPage);
+                    imgRightEl.style.display = 'block';
+                } else {
+                    imgRightEl.style.display = 'none';
+                }
+                const label = `p.${resolvedLeftPage}–${Math.min(rightPage, MAX_PAGE)}`;
+                pageInd.textContent = label;
+                floatPage.textContent = label;
+                updateChapterTitle(resolvedLeftPage);
             } else {
-                document.getElementById('chapter-title').textContent = `テキスト p.${currentPage}`;
-                explanationDiv.innerHTML = `<div class="empty-state">このページには特別な解説はありません。</div>`;
+                imgEl.src = getImageSrc(currentPage);
+                imgRightEl.style.display = 'none';
+                pageInd.textContent = `p.${currentPage}`;
+
+                // Clean up prev graphs
+                if (window.GraphHelper) GraphHelper.cleanup();
+
+                if (viewMode === 'guide') {
+                    const data = (typeof guideData !== 'undefined') ? guideData[currentPage.toString()] : null;
+                    if (data) {
+                        explanationDiv.innerHTML = data.content;
+                        chapterTitle.textContent = data.title;
+                    } else {
+                        updateChapterTitle(currentPage);
+                        explanationDiv.innerHTML = `<div class="empty-state">このページの解説は準備中です。</div>`;
+                    }
+
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        MathJax.typesetPromise([explanationDiv]).then(() => {
+                            if (data && data.onRender) {
+                                try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
+                            }
+                        }).catch(e => console.log(e.message));
+                    } else if (data && data.onRender) {
+                        setTimeout(() => {
+                            try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
+                        }, 200);
+                    }
+                } else {
+                    // Viewer mode — just update title
+                    updateChapterTitle(currentPage);
+                }
             }
 
-            if (window.MathJax && window.MathJax.typesetPromise) {
-                MathJax.typesetPromise([explanationDiv]).then(() => {
-                    // グラフ描画コールバックの実行
-                    if (data && data.onRender) {
-                        try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
-                    }
-                }).catch(e => console.log(e.message));
-            } else if (data && data.onRender) {
-                setTimeout(() => {
-                    try { data.onRender(); } catch(e) { console.warn('onRender error:', e); }
-                }, 200);
-            }
+            // scroll image to top
+            imageWrapper.scrollTop = 0;
+
+            isNavigating = false;
+        });
+    }
+
+    function updateChapterTitle(p) {
+        const ch = getChapterForPage(p);
+        if (ch) {
+            chapterTitle.textContent = `${ch.title} — p.${p}`;
+        } else {
+            chapterTitle.textContent = `p.${p}`;
         }
     }
 
-    function goNext() { loadPage(currentPage + (isLectureMode ? 2 : 1), 1); }
-    function goPrev() { loadPage(currentPage - (isLectureMode ? 2 : 1), -1); }
+    function goNext() { loadPage(currentPage + (viewMode === 'spread' ? 2 : 1), 1); }
+    function goPrev() { loadPage(currentPage - (viewMode === 'spread' ? 2 : 1), -1); }
 
-    // Header nav
     btnPrev.addEventListener('click', goPrev);
     btnNext.addEventListener('click', goNext);
-
-    // Floating nav
     floatPrev.addEventListener('click', goPrev);
     floatNext.addEventListener('click', goNext);
 
-    // Mode toggle
-    btnMode.addEventListener('click', () => {
-        isLectureMode = !isLectureMode;
-        viewerContainer.classList.toggle('lecture-mode', isLectureMode);
-        btnMode.classList.toggle('active', isLectureMode);
-        modeIcon.textContent = isLectureMode ? '📝' : '📖';
-        modeLabel.textContent = isLectureMode ? '解説モード' : '講義モード';
-        
-        btnFullscreen.style.display = isLectureMode ? 'inline-flex' : 'none';
-        floatingNav.style.display = isLectureMode ? 'block' : 'none';
-        
-        if (!isLectureMode && document.fullscreenElement) {
-            document.exitFullscreen();
-        }
-        loadPage(currentPage);
-    });
-
-    // Fullscreen toggle
+    // Fullscreen toggle (spread mode only)
     function toggleFullscreen() {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().then(() => {
@@ -178,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnFullscreen.addEventListener('click', toggleFullscreen);
     floatExitFs.addEventListener('click', exitFullscreen);
 
-    // Fullscreen change event (handles ESC and all exit methods)
     document.addEventListener('fullscreenchange', () => {
         if (!document.fullscreenElement) {
             document.body.classList.remove('fullscreen-mode');
@@ -189,14 +282,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Keyboard
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
+        // Ignore when page jump input is focused
+        if (document.activeElement && document.activeElement.id === 'page-jump-input') return;
+        
         if (e.key === 'ArrowLeft') goPrev();
         else if (e.key === 'ArrowRight') goNext();
-        else if ((e.key === 'f' || e.key === 'F') && isLectureMode) toggleFullscreen();
+        else if ((e.key === 'f' || e.key === 'F') && viewMode === 'spread') toggleFullscreen();
+        else if (e.key === 'Escape') closePageJump();
     });
 
-    // Touch swipe support for tablets
+    // Touch swipe
     let touchStartX = 0;
     document.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
@@ -209,5 +306,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
+    // ===== Page Jump Modal =====
+    const jumpOverlay = document.getElementById('page-jump-overlay');
+    const jumpInput = document.getElementById('page-jump-input');
+    const jumpGo = document.getElementById('page-jump-go');
+    const jumpClose = document.getElementById('page-jump-close');
+
+    pageInd.addEventListener('click', () => {
+        jumpOverlay.classList.add('active');
+        jumpInput.value = currentPage;
+        jumpInput.focus();
+        jumpInput.select();
+    });
+
+    function doJump() {
+        const p = parseInt(jumpInput.value);
+        if (p >= MIN_PAGE && p <= MAX_PAGE) {
+            closePageJump();
+            loadPage(p);
+        }
+    }
+
+    jumpGo.addEventListener('click', doJump);
+    jumpInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') doJump();
+        if (e.key === 'Escape') closePageJump();
+    });
+
+    jumpClose.addEventListener('click', closePageJump);
+    jumpOverlay.addEventListener('click', (e) => {
+        if (e.target === jumpOverlay) closePageJump();
+    });
+
+    function closePageJump() {
+        jumpOverlay.classList.remove('active');
+    }
+
+    // Chapter quick-jump buttons
+    document.querySelectorAll('#page-jump-chapters button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const p = parseInt(btn.dataset.page);
+            if (p) {
+                closePageJump();
+                loadPage(p);
+            }
+        });
+    });
+
+    // ===== Mouse wheel zoom (Ctrl + scroll) =====
+    const imagePaneEl = document.getElementById('image-pane');
+    imagePaneEl.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+                currentZoom = Math.min(3, currentZoom + 0.1);
+            } else {
+                currentZoom = Math.max(0.5, currentZoom - 0.1);
+            }
+            applyZoom();
+        }
+    }, { passive: false });
+
+    // Initial load
     loadPage(currentPage);
 });

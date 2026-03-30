@@ -239,6 +239,262 @@ const GraphHelper = {
         }
     },
 
+    // ===== ▼ 図形描画メソッド（第4章以降） ▼ =====
+
+    /**
+     * 図形描画用ボード（方眼・軸なし）を作成
+     * @param {string} elementId - div要素のID
+     * @param {object} opts - { boundingbox, width, height, background }
+     * @returns {JXG.Board}
+     */
+    createGeometryBoard: function(elementId, opts = {}) {
+        if (this._boards[elementId]) {
+            try { JXG.JSXGraph.freeBoard(this._boards[elementId]); } catch(e) {}
+        }
+        const el = document.getElementById(elementId);
+        if (!el) { console.warn('Geometry element not found:', elementId); return null; }
+
+        const bbox = opts.boundingbox || [-5, 5, 5, -5];
+        const w = opts.width || 320;
+        const h = opts.height || 240;
+        el.style.width = w + 'px';
+        el.style.height = h + 'px';
+        if (opts.background) el.style.background = opts.background;
+
+        const board = JXG.JSXGraph.initBoard(elementId, {
+            boundingbox: bbox,
+            axis: false,
+            grid: false,
+            showCopyright: false,
+            showNavigation: false,
+            pan: { enabled: false },
+            zoom: { enabled: false },
+            keepAspectRatio: opts.keepAspectRatio !== false,
+        });
+
+        this._boards[elementId] = board;
+        return board;
+    },
+
+    /**
+     * 線分を描画
+     * @param {JXG.Board} board
+     * @param {Array} p1 - [x1, y1]
+     * @param {Array} p2 - [x2, y2]
+     * @param {object} opts - { color, width, dash, arrow }
+     */
+    drawSegment: function(board, p1, p2, opts = {}) {
+        const color = opts.color || '#333';
+        const width = opts.width || 2;
+        const type = opts.arrow ? 'arrow' : 'segment';
+        return board.create(type, [p1, p2], {
+            strokeColor: color, strokeWidth: width,
+            dash: opts.dash || 0,
+            fixed: true, highlight: false,
+            point1: { visible: false }, point2: { visible: false },
+            lastArrow: opts.arrow ? { type: 2, size: 6 } : false
+        });
+    },
+
+    /**
+     * 半直線（直線の一部を無限に延長）を描画
+     * @param {JXG.Board} board
+     * @param {Array} p1 - 始点 [x1, y1]
+     * @param {Array} p2 - 通過点 [x2, y2]
+     * @param {object} opts - { color, width, arrow }
+     */
+    drawRay: function(board, p1, p2, opts = {}) {
+        const color = opts.color || '#333';
+        const width = opts.width || 2;
+        return board.create('line', [p1, p2], {
+            straightFirst: false, straightLast: true,
+            strokeColor: color, strokeWidth: width,
+            dash: opts.dash || 0,
+            fixed: true, highlight: false,
+            point1: { visible: false }, point2: { visible: false },
+            lastArrow: opts.arrow ? { type: 2, size: 6 } : false
+        });
+    },
+
+    /**
+     * 無限直線を描画（2点を通る直線）
+     * @param {JXG.Board} board
+     * @param {Array} p1 - [x1, y1]
+     * @param {Array} p2 - [x2, y2]
+     * @param {object} opts - { color, width, dash }
+     */
+    drawInfiniteLine: function(board, p1, p2, opts = {}) {
+        const color = opts.color || '#333';
+        const width = opts.width || 2;
+        return board.create('line', [p1, p2], {
+            straightFirst: true, straightLast: true,
+            strokeColor: color, strokeWidth: width,
+            dash: opts.dash || 0,
+            fixed: true, highlight: false,
+            point1: { visible: false }, point2: { visible: false }
+        });
+    },
+
+    /**
+     * 角度の弧（アーク）を描画
+     * @param {JXG.Board} board
+     * @param {Array} pStart - 弧の始点側の点 [x, y]
+     * @param {Array} pVertex - 頂点 [x, y]
+     * @param {Array} pEnd - 弧の終点側の点 [x, y]
+     * @param {object} opts - { radius, color, fill, label }
+     */
+    drawAngleArc: function(board, pStart, pVertex, pEnd, opts = {}) {
+        const radius = opts.radius || 0.8;
+        const color = opts.color || '#e74c3c';
+        const fillColor = opts.fill || 'rgba(231,76,60,0.15)';
+
+        const ptA = board.create('point', pStart, { visible: false });
+        const ptV = board.create('point', pVertex, { visible: false });
+        const ptB = board.create('point', pEnd, { visible: false });
+
+        const angle = board.create('angle', [ptA, ptV, ptB], {
+            radius: radius,
+            strokeColor: color,
+            strokeWidth: 1.5,
+            fillColor: fillColor,
+            fillOpacity: 0.3,
+            fixed: true,
+            highlight: false,
+            name: opts.label || '',
+            label: {
+                fontSize: opts.fontSize || 13,
+                offset: opts.labelOffset || [0, 0],
+                color: color,
+                visible: opts.label ? true : false
+            },
+            orthoType: 'square',
+            orthoSensitivity: opts.rightAngle ? 0.01 : 1.5
+        });
+        return angle;
+    },
+
+    /**
+     * テキストラベルを描画
+     * @param {JXG.Board} board
+     * @param {number} x
+     * @param {number} y
+     * @param {string} text
+     * @param {object} opts - { color, fontSize, anchorX }
+     */
+    drawLabel: function(board, x, y, text, opts = {}) {
+        return board.create('text', [x, y, text], {
+            fontSize: opts.fontSize || 14,
+            fixed: true,
+            highlight: false,
+            anchorX: opts.anchorX || 'middle',
+            anchorY: opts.anchorY || 'middle',
+            color: opts.color || '#333',
+            fontStyle: opts.italic ? 'italic' : 'normal',
+            fontWeight: opts.bold ? 'bold' : 'normal',
+            useMathJax: opts.useMathJax || false
+        });
+    },
+
+    /**
+     * 平行マーク（矢印マーク ▶）を線分上に描画
+     * @param {JXG.Board} board
+     * @param {Array} p1 - 線分の始点 [x1, y1]
+     * @param {Array} p2 - 線分の終点 [x2, y2]
+     * @param {object} opts - { count, color, size, position }
+     */
+    drawParallelMark: function(board, p1, p2, opts = {}) {
+        const count = opts.count || 1;
+        const color = opts.color || '#e74c3c';
+        const size = opts.size || 0.2;
+        const pos = opts.position || 0.5; // 0~1 の位置
+
+        const mx = p1[0] + (p2[0] - p1[0]) * pos;
+        const my = p1[1] + (p2[1] - p1[1]) * pos;
+        const angle = Math.atan2(p2[1] - p1[1], p2[0] - p1[0]);
+        const spacing = size * 0.7;
+
+        for (let i = 0; i < count; i++) {
+            const offset = (i - (count - 1) / 2) * spacing;
+            const cx = mx + offset * Math.cos(angle);
+            const cy = my + offset * Math.sin(angle);
+
+            // 「>」を構成する2本の短線分
+            const tipX = cx + size * 0.4 * Math.cos(angle);
+            const tipY = cy + size * 0.4 * Math.sin(angle);
+            const arm = size * 0.35;
+            const perpAngle = angle + Math.PI / 2;
+
+            board.create('segment', [
+                [cx - size * 0.4 * Math.cos(angle) + arm * Math.cos(perpAngle),
+                 cy - size * 0.4 * Math.sin(angle) + arm * Math.sin(perpAngle)],
+                [tipX, tipY]
+            ], {
+                strokeColor: color, strokeWidth: 2,
+                fixed: true, highlight: false,
+                point1: { visible: false }, point2: { visible: false }
+            });
+            board.create('segment', [
+                [cx - size * 0.4 * Math.cos(angle) - arm * Math.cos(perpAngle),
+                 cy - size * 0.4 * Math.sin(angle) - arm * Math.sin(perpAngle)],
+                [tipX, tipY]
+            ], {
+                strokeColor: color, strokeWidth: 2,
+                fixed: true, highlight: false,
+                point1: { visible: false }, point2: { visible: false }
+            });
+        }
+    },
+
+    /**
+     * 三角形を描画
+     * @param {JXG.Board} board
+     * @param {Array} pA - [x, y]
+     * @param {Array} pB - [x, y]
+     * @param {Array} pC - [x, y]
+     * @param {object} opts - { color, fillColor, fillOpacity, labels }
+     */
+    drawTriangle: function(board, pA, pB, pC, opts = {}) {
+        const color = opts.color || '#333';
+        const fillColor = opts.fillColor || 'transparent';
+        const fillOpacity = opts.fillOpacity || 0;
+
+        const polygon = board.create('polygon', [pA, pB, pC], {
+            borders: {
+                strokeColor: color,
+                strokeWidth: opts.width || 2,
+                fixed: true, highlight: false
+            },
+            fillColor: fillColor,
+            fillOpacity: fillOpacity,
+            fixed: true,
+            highlight: false,
+            vertices: { visible: false },
+            hasInnerPoints: false
+        });
+
+        // 頂点ラベル
+        if (opts.labels) {
+            const points = [pA, pB, pC];
+            const offsets = opts.labelOffsets || [[0, 0.4], [0, -0.4], [0, 0.4]];
+            opts.labels.forEach((label, i) => {
+                if (label) {
+                    board.create('text', [
+                        points[i][0] + (offsets[i] ? offsets[i][0] : 0),
+                        points[i][1] + (offsets[i] ? offsets[i][1] : 0),
+                        label
+                    ], {
+                        fontSize: 14, fixed: true, highlight: false,
+                        anchorX: 'middle', color: '#333'
+                    });
+                }
+            });
+        }
+
+        return polygon;
+    },
+
+    // ===== ▲ 図形描画メソッド ▲ =====
+
     /**
      * すべてのボードを破棄（ページ遷移時）
      */
