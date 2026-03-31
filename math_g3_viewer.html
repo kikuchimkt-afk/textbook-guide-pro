@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中3 数学 | ビューア</title>
+    <meta name="description" content="中学3年 数学（啓林館版）教科書ビューア">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.8.0/distrib/jsxgraph.css">
+</head>
+<body class="viewer-body">
+    <header class="viewer-header">
+        <a href="math_g3_toc.html" class="back-link" style="color:#fff;">
+            <svg style="width:24px;height:24px;margin-right:5px;vertical-align:middle" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+            目次
+        </a>
+        <h1 id="chapter-title">中3 数学</h1>
+        <div class="header-actions">
+            <div class="view-mode-switcher" id="view-mode-switcher">
+                <button class="mode-tab active" data-mode="viewer" id="tab-viewer" title="ページ閲覧">
+                    <span class="mode-tab-icon">📄</span><span class="mode-tab-label">ビューア</span>
+                </button>
+                <button class="mode-tab" data-mode="guide" id="tab-guide" title="解説付き">
+                    <span class="mode-tab-icon">📝</span><span class="mode-tab-label">解説</span>
+                </button>
+                <button class="mode-tab" data-mode="spread" id="tab-spread" title="見開き表示">
+                    <span class="mode-tab-icon">📖</span><span class="mode-tab-label">見開き</span>
+                </button>
+            </div>
+        </div>
+        <div class="page-controls">
+            <button id="btn-fullscreen" class="btn-fullscreen" title="全画面表示" style="display:none">
+                <span id="fs-icon">📺</span>
+                <span id="fs-label">全画面</span>
+            </button>
+            <button id="btn-prev" class="btn-icon" title="前のページ">◀</button>
+            <span id="page-indicator" class="page-indicator-btn" title="ページジャンプ">p.--</span>
+            <button id="btn-next" class="btn-icon" title="次のページ">▶</button>
+        </div>
+    </header>
+    
+    <main class="viewer-container" id="viewer-container">
+        <!-- Left Pane: Textbook Image -->
+        <section class="pane left-pane" id="image-pane">
+            <div class="zoom-controls" id="zoom-controls">
+                <button id="btn-zoom-out" title="縮小">−</button>
+                <button id="btn-zoom-reset" title="リセット">⟳</button>
+                <button id="btn-zoom-in" title="拡大">+</button>
+            </div>
+            <div class="image-wrapper" id="image-wrapper">
+                <img id="textbook-img" src="" alt="Textbook Page" draggable="false">
+                <img id="textbook-img-right" src="" alt="Textbook Page Right" draggable="false" style="display:none">
+            </div>
+        </section>
+        
+        <!-- Right Pane: Explanation (hidden by default in viewer mode) -->
+        <section class="pane right-pane" id="right-pane" style="display:none">
+            <div class="explanation-content" id="explanation-container">
+                <div class="empty-state">解説を読み込み中...</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フローティングナビ (見開きモード用) -->
+    <div class="floating-nav" id="floating-nav" style="display:none">
+        <button class="float-btn float-prev" id="float-prev">❮</button>
+        <button class="float-btn float-next" id="float-next">❯</button>
+        <div class="float-page" id="float-page">p.--</div>
+        <button class="float-btn float-exit-fs" id="float-exit-fs" style="display:none">✕ 全画面解除</button>
+    </div>
+
+    <!-- ページジャンプモーダル -->
+    <div class="page-jump-overlay" id="page-jump-overlay">
+        <div class="page-jump-modal">
+            <h3>ページジャンプ</h3>
+            <div class="page-jump-input-row">
+                <span>p.</span>
+                <input type="number" id="page-jump-input" min="1" max="280" placeholder="1〜280">
+                <button id="page-jump-go">移動</button>
+            </div>
+            <div class="page-jump-chapters" id="page-jump-chapters">
+                <button data-page="12">第1章 p.12</button>
+                <button data-page="40">第2章 p.40</button>
+                <button data-page="68">第3章 p.68</button>
+                <button data-page="92">第4章 p.92</button>
+                <button data-page="122">第5章 p.122</button>
+                <button data-page="162">第6章 p.162</button>
+                <button data-page="182">第7章 p.182</button>
+                <button data-page="204">第8章 p.204</button>
+            </div>
+            <button class="page-jump-close" id="page-jump-close">閉じる</button>
+        </div>
+    </div>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.8.0/distrib/jsxgraphcore.js"></script>
+    <script src="js/graph_helper.js"></script>
+    <script src="js/data_math_g3.js"></script>
+    <script src="js/app_math_g3.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中3 数学 (啓林館) | 目次</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .toc-header { margin-bottom: 2rem; }
+        .toc-list { display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto; }
+        .toc-item { 
+            background: var(--card-bg); 
+            border: 1px solid var(--card-border); 
+            border-radius: 12px; 
+            padding: 1.5rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            text-decoration: none; 
+            color: var(--text-primary); 
+            transition: all 0.3s ease; 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .toc-item:hover { 
+            transform: translateX(10px); 
+            background: rgba(255, 255, 255, 0.2); 
+            border-color: rgba(255,255,255,0.5);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .toc-item.disabled { opacity: 0.5; pointer-events: none; background: rgba(0,0,0,0.2); }
+        .toc-item h3 { font-size: 1.3rem; margin: 0; }
+        .toc-item .page-num { font-size: 1rem; color: var(--text-secondary); background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 6px; }
+        .back-link { display: inline-flex; align-items: center; margin-bottom: 2rem; color: var(--text-secondary); text-decoration: none; font-size: 1.1rem; transition: color 0.3s ease; }
+        .back-link:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <a href="index.html" class="back-link">
+            <svg style="width:24px;height:24px;margin-right:5px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+            ホームに戻る
+        </a>
+        
+        <header class="lp-header toc-header">
+            <h1>中3 数学 <span class="badge" style="background:var(--primary-color);">啓林館</span></h1>
+            <p>学習したい章を選んでください</p>
+        </header>
+        
+        <main class="lp-main">
+            <div class="toc-list">
+                <a href="math_g3_viewer.html?chapter=1&page=12" class="toc-item">
+                    <h3>第1章 式の展開と因数分解</h3>
+                    <span class="page-num">p.12〜p.38</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=2&page=40" class="toc-item">
+                    <h3>第2章 平方根</h3>
+                    <span class="page-num">p.40〜p.66</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=3&page=68" class="toc-item">
+                    <h3>第3章 二次方程式</h3>
+                    <span class="page-num">p.68〜p.90</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=4&page=92" class="toc-item">
+                    <h3>第4章 関数 y=ax²</h3>
+                    <span class="page-num">p.92〜p.120</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=5&page=122" class="toc-item">
+                    <h3>第5章 図形と相似</h3>
+                    <span class="page-num">p.122〜p.160</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=6&page=162" class="toc-item">
+                    <h3>第6章 円の性質</h3>
+                    <span class="page-num">p.162〜p.180</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=7&page=182" class="toc-item">
+                    <h3>第7章 三平方の定理</h3>
+                    <span class="page-num">p.182〜p.202</span>
+                </a>
+                <a href="math_g3_viewer.html?chapter=8&page=204" class="toc-item">
+                    <h3>第8章 標本調査とデータの活用</h3>
+                    <span class="page-num">p.204〜p.220</span>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
