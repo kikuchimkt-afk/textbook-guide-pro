@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatExitFs = document.getElementById('float-exit-fs');
     const chapterTitle = document.getElementById('chapter-title');
     const backLink = document.getElementById('back-link');
+    const qrBar = document.getElementById('qr-bar');
+    const qrLink = document.getElementById('qr-link');
+    const qrLinkLabel = document.getElementById('qr-link-label');
 
     // Set back link
     backLink.href = gradeData.tocPage;
@@ -196,9 +199,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update title
             updateTitle(currentPage);
 
+            // Update QR link bar
+            updateQrBar(currentPage);
+
             imageWrapper.scrollTop = 0;
             isNavigating = false;
         });
+    }
+
+    function updateQrBar(p) {
+        const sec = getSectionForPage(p);
+        if (sec && sec.qrUrl) {
+            qrLink.href = sec.qrUrl;
+            qrLinkLabel.textContent = `${sec.title} 音声・動画`;
+            qrBar.style.display = 'block';
+        } else {
+            qrBar.style.display = 'none';
+        }
     }
 
     function updateTitle(p) {

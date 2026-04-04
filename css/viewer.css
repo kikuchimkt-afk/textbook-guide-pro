@@ -453,6 +453,63 @@
 }
 .qr-link-btn::before { content: '📱'; }
 
+/* ===== QR Link Bar (English Viewer) ===== */
+.qr-bar {
+    position: absolute;
+    bottom: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    animation: qrBarIn 0.4s ease;
+}
+@keyframes qrBarIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.qr-bar-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.95));
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 15px rgba(52,152,219,0.35), 0 0 0 1px rgba(255,255,255,0.05);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    font-family: var(--font-main);
+}
+.qr-bar-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52,152,219,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+    background: linear-gradient(135deg, rgba(41, 128, 185, 0.95), rgba(52, 73, 94, 0.95));
+}
+.qr-bar-link:active { transform: translateY(0); }
+.qr-bar-icon { font-size: 1.15rem; }
+.qr-bar-arrow {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: transform 0.2s;
+}
+.qr-bar-link:hover .qr-bar-arrow {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+/* 見開きモード時のQRバー調整 */
+.spread-mode .qr-bar {
+    bottom: 20px;
+}
+.fullscreen-mode .qr-bar {
+    bottom: 60px;
+}
+
 /* ===== JSXGraph Graph Styles ===== */
 .graph-container {
     margin: 1rem 0;
