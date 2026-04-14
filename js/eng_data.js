@@ -35,7 +35,29 @@ const engData = {
             { id: "prog10", title: "Program 10",      start: 122, end: 133, pages: 12, qrUrl: "https://www.kairyudo.co.jp/r7ce1_pr10" },
             { id: "proj3",  title: "Our Project 3",   start: 134, end: 139, pages: 6,  qrUrl: "https://www.kairyudo.co.jp/r7ce1_op3" },
             { id: "appendix", title: "📚 巻末資料",   start: 140, end: 167, pages: 28 },
-        ]
+        ],
+        pageQrs: {
+            "10": "https://www.kairyudo.co.jp/r7ce1_gr",
+            "27": "https://www.kairyudo.co.jp/r7ce1_st1",
+            "41": "https://www.kairyudo.co.jp/r7ce1_pr3",
+            "42": "https://www.kairyudo.co.jp/r7ce1_pr3",
+            "44": "https://www.kairyudo.co.jp/r7ce1_op1",
+            "55": "https://www.kairyudo.co.jp/r7ce1_pr4",
+            "65": "https://www.kairyudo.co.jp/r7ce1_pr5",
+            "68": "https://www.kairyudo.co.jp/r7ce1_pr5",
+            "74": "https://www.kairyudo.co.jp/r7ce1_pr6",
+            "78": "https://www.kairyudo.co.jp/r7ce1_pr6",
+            "80": "https://www.kairyudo.co.jp/r7ce1_pr7",
+            "82": "https://www.kairyudo.co.jp/r7ce1_pr7",
+            "85": "https://www.kairyudo.co.jp/r7ce1_pr7",
+            "88": "https://www.kairyudo.co.jp/r7ce1_pr7",
+            "92": "https://www.kairyudo.co.jp/r7ce1_op2",
+            "103": "https://www.kairyudo.co.jp/r7ce1_pr8",
+            "106": "https://www.kairyudo.co.jp/r7ce1_pr8",
+            "128": "https://www.kairyudo.co.jp/r7ce1_pr10",
+            "130": "https://www.kairyudo.co.jp/r7ce1_pr10",
+            "132": "https://www.kairyudo.co.jp/r7ce1_pr10"
+        }
     },
 
     // ===== 中2 =====

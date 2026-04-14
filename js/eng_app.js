@@ -47,6 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrLink = document.getElementById('qr-link');
     const qrLinkLabel = document.getElementById('qr-link-label');
 
+    const iframeModalOverlay = document.getElementById('iframe-modal-overlay');
+    const iframeModalFrame = document.getElementById('iframe-modal-frame');
+    const iframeModalClose = document.getElementById('iframe-modal-close');
+    const iframeModalTitle = document.getElementById('iframe-modal-title');
+    const iframeModal = document.querySelector('.iframe-modal');
+    const iframeModalHeader = document.querySelector('.iframe-modal-header');
+    const iframeModalResize = document.getElementById('iframe-modal-resize');
+
     // Set back link
     backLink.href = gradeData.tocPage;
 
@@ -209,14 +217,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateQrBar(p) {
         const sec = getSectionForPage(p);
-        if (sec && sec.qrUrl) {
-            qrLink.href = sec.qrUrl;
+        const pageQr = gradeData.pageQrs && gradeData.pageQrs[p];
+
+        if (pageQr) {
+            qrLink.dataset.url = pageQr;
+            const isStep = pageQr.includes('_st');
+            const suffix = isStep ? ' 音声・動画' : ' 音声・動画 (ページ専用)';
+            qrLinkLabel.textContent = sec ? `${sec.title}${suffix}` : `音声・動画 (ページ専用)`;
+            qrBar.style.display = 'block';
+        } else if (sec && sec.qrUrl) {
+            qrLink.dataset.url = sec.qrUrl;
             qrLinkLabel.textContent = `${sec.title} 音声・動画`;
             qrBar.style.display = 'block';
         } else {
             qrBar.style.display = 'none';
         }
     }
+
+    // モーダルのドラッグ機構とサイズ変更
+    let isDragging = false;
+    let dragStartX = 0, dragStartY = 0;
+    let currentTx = 0, currentTy = 0;
+
+    iframeModalHeader.addEventListener('mousedown', (e) => {
+        if (e.target.tagName.toLowerCase() === 'button') return;
+        isDragging = true;
+        dragStartX = e.clientX - currentTx;
+        dragStartY = e.clientY - currentTy;
+        iframeModalFrame.style.pointerEvents = 'none'; // prevent iframe stealing mouse
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        currentTx = e.clientX - dragStartX;
+        currentTy = e.clientY - dragStartY;
+        iframeModal.style.transform = `translate(${currentTx}px, ${currentTy}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            iframeModalFrame.style.pointerEvents = 'auto';
+        }
+    });
+
+    iframeModalResize.addEventListener('click', () => {
+        iframeModal.classList.toggle('modal-half');
+    });
+
+    qrLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = qrLink.dataset.url;
+        if (url) {
+            iframeModalTitle.textContent = qrLinkLabel.textContent;
+            iframeModalFrame.src = url;
+            iframeModalOverlay.style.display = 'flex';
+            // reset position and size when opened
+            currentTx = 0;
+            currentTy = 0;
+            iframeModal.style.transform = `translate(0px, 0px)`;
+            iframeModal.classList.remove('modal-half');
+        }
+    });
+
+    iframeModalClose.addEventListener('click', () => {
+        iframeModalOverlay.style.display = 'none';
+        iframeModalFrame.src = '';
+    });
 
     function updateTitle(p) {
         const sec = getSectionForPage(p);
