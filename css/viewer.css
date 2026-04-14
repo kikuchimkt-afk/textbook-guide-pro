@@ -468,8 +468,8 @@
 .qr-bar-link {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
+    gap: 10px;
+    padding: 14px 24px;
     background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.95));
     color: #fff;
     text-decoration: none;
@@ -543,13 +543,14 @@
 }
 
 .iframe-modal-header {
-    height: 50px;
+    height: 60px;
     background: linear-gradient(135deg, #16213e, #1a1a3e);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: move;
 }
@@ -559,10 +560,10 @@
     background: rgba(255,255,255,0.1);
     color: #fff;
     border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 1.3rem;
     cursor: pointer;
     display: flex;
     align-items: center;

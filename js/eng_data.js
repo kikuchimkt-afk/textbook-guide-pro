@@ -82,7 +82,16 @@ const engData = {
             { id: "prog8",    title: "Program 8",       start: 106, end: 117, pages: 12, qrUrl: "https://www.kairyudo.co.jp/r7ce2_pr8" },
             { id: "proj6",    title: "Our Project 6",   start: 118, end: 127, pages: 10, qrUrl: "https://www.kairyudo.co.jp/r7ce2_op6" },
             { id: "appendix", title: "📚 巻末資料",     start: 128, end: 159, pages: 32 },
-        ]
+        ],
+        pageQrs: {
+            "12": "https://www.kairyudo.co.jp/r7ce2_pr1",
+            "22": "https://www.kairyudo.co.jp/r7ce2_pr2",
+            "24": "https://www.kairyudo.co.jp/r7ce2_pr2",
+            "54": "https://www.kairyudo.co.jp/r7ce2_pr4",
+            "59": "https://www.kairyudo.co.jp/r7ce2_pr4",
+            "90": "https://www.kairyudo.co.jp/r7ce2_op5",
+            "104": "https://www.kairyudo.co.jp/r7ce2_pr7"
+        }
     },
 
     // ===== 中3 =====

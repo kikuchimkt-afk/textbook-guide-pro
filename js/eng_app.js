@@ -234,32 +234,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // モーダルのドラッグ機構とサイズ変更
+    // モーダルのドラッグ機構とサイズ変更 (マウス・タッチ両対応)
     let isDragging = false;
     let dragStartX = 0, dragStartY = 0;
     let currentTx = 0, currentTy = 0;
 
-    iframeModalHeader.addEventListener('mousedown', (e) => {
+    function handleDragStart(e) {
         if (e.target.tagName.toLowerCase() === 'button') return;
         isDragging = true;
-        dragStartX = e.clientX - currentTx;
-        dragStartY = e.clientY - currentTy;
-        iframeModalFrame.style.pointerEvents = 'none'; // prevent iframe stealing mouse
-    });
+        const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        const clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+        dragStartX = clientX - currentTx;
+        dragStartY = clientY - currentTy;
+        iframeModalFrame.style.pointerEvents = 'none'; // prevent iframe stealing mouse/touch
+    }
 
-    window.addEventListener('mousemove', (e) => {
+    function handleDragMove(e) {
         if (!isDragging) return;
-        currentTx = e.clientX - dragStartX;
-        currentTy = e.clientY - dragStartY;
+        // prevent background scrolling on touch devices
+        if (e.type.includes('touch')) e.preventDefault(); 
+        
+        const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        const clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+        currentTx = clientX - dragStartX;
+        currentTy = clientY - dragStartY;
         iframeModal.style.transform = `translate(${currentTx}px, ${currentTy}px)`;
-    });
+    }
 
-    window.addEventListener('mouseup', () => {
+    function handleDragEnd() {
         if (isDragging) {
             isDragging = false;
             iframeModalFrame.style.pointerEvents = 'auto';
         }
-    });
+    }
+
+    iframeModalHeader.addEventListener('mousedown', handleDragStart);
+    iframeModalHeader.addEventListener('touchstart', handleDragStart, { passive: false });
+
+    window.addEventListener('mousemove', handleDragMove);
+    window.addEventListener('touchmove', handleDragMove, { passive: false });
+
+    window.addEventListener('mouseup', handleDragEnd);
+    window.addEventListener('touchend', handleDragEnd);
+    window.addEventListener('touchcancel', handleDragEnd);
 
     iframeModalResize.addEventListener('click', () => {
         iframeModal.classList.toggle('modal-half');
