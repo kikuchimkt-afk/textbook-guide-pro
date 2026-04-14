@@ -113,10 +113,17 @@ const engData = {
             { id: "prog6",    title: "Program 6",          start: 78,  end: 87,  pages: 10, qrUrl: "https://www.kairyudo.co.jp/r7ce3_pr6" },
             { id: "proj8",    title: "Our Project 8",      start: 88,  end: 93,  pages: 6,  qrUrl: "https://www.kairyudo.co.jp/r7ce3_op8" },
             { id: "prog7",    title: "Program 7",          start: 94,  end: 104, pages: 11, qrUrl: "https://www.kairyudo.co.jp/r7ce3_pr7" },
-            { id: "read2",    title: "Reading 2",          start: 105, end: 110, pages: 6,  qrUrl: "https://www.kairyudo.co.jp/r7ce3_r2" },
+            { id: "read2",    title: "Reading 2",          start: 105, end: 110, pages: 6,  qrUrl: "https://www.kairyudo.co.jp/r7ce3_re2" },
             { id: "special",  title: "Special Project",    start: 111, end: 113, pages: 3  },
             { id: "further",  title: "Further Reading",    start: 114, end: 125, pages: 12, qrUrl: "https://www.kairyudo.co.jp/r7ce3_fr" },
             { id: "appendix", title: "📚 巻末資料",        start: 126, end: 159, pages: 34 },
-        ]
+        ],
+        pageQrs: {
+            "66": "https://www.kairyudo.co.jp/r7ce3_pr5",
+            "68": "https://www.kairyudo.co.jp/r7ce3_pr5",
+            "72": "https://www.kairyudo.co.jp/r7ce3_pr5",
+            "102": "https://www.kairyudo.co.jp/r7ce3_pr7",
+            "106": "https://www.kairyudo.co.jp/r7ce3_re2"
+        }
     }
 };
